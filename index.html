@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/index.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+  </style>
+  <title>Balazs Janoska</title>
+</head>
+
+<body>
+  <header id="header">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand-c" href="index.html">JB</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Balazs Janoska</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Balazs-Janoska-CV.pdf" target="_blank">CV</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="hero-section">
+    <div class="hero-title">
+      <h1>Balázs <br> Jánoska</h1>
+      <h2>front-end developer, content creator <br>
+        & marketing specialist</h2>
+    </div>
+    <img src="assets/images/spaceship.png" alt="">
+  </div>
+  <div id="about" class="about-wrap">
+    <img src="assets/images/Balazs-portrait.png" alt="">
+    <div class="about-text">
+      <h2>Hi, I'm Balázs</h2>
+      <p>I’m a multimedia design student at UCN Aalborg, currently
+        looking for an internship related to front-end development
+        and/or content creation. <br> 
+
+        If I had to describe myself briefly, I'd say that I'm an open minded and friendly guy
+        who's always ready to explore and learn new stuff. <br> Do you want to get to know me better? 
+      </p>
+      <button class="about-btn">Read more</button>
+    </div>
+  </div>
+  <div class="skills-wrap">
+    <h2>How can I help you? <span><img id="helpimg" src="assets/icons/list.png" alt=""></span></h2>
+    <div class="skill-card-wrap">
+      <div class="skill-card">
+        <h2>Front-end development</h2>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Web API development</li>
+          <li>Wordpress</li>
+          <li>Vue.js, Node.js & MSSQL</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h2>Content creation</h2>
+        <ul>
+          <li>Photo & Video editing</li>
+          <li>Photography & Videography</li>
+          <li>Social Media management</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="projects" class="projects-wrap">
+    <h2>Recent projects <span><img id="calendar" src="assets/icons/calendar.png" alt=""></span></h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h2>Instagram caption generator Web API</h2>
+        <p><strong>Role</strong> - Developer</p>
+        <p><strong>Technologies</strong> - JavaScript, HTML, <br> CSS, Node.js, MSSQL</p>
+        <p><strong>Date</strong> - 2022</p>
+        <button class="projects-btn">Read more</button>
+        <img src="assets/images/webapi-mockup.png" alt="">
+      </div>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <h2>My fishing blog on Instagram</h2>
+        <p><strong>Role</strong> - Content creator</p>
+        <p><strong>Achievements</strong> - 800 + organic followers, <br> 12% engagement rate</p>
+        <p><strong>Date</strong> - 2020 - Present</p>
+        <button class="projects-btn">Read more</button>
+        <img id="barbless-mockup" src="assets/images/barbless-mockup.png" alt="">
+      </div>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <h2>Portfolio for an artist</h2>
+        <p><strong>Role</strong> - Developer</p>
+        <p><strong>Technologies</strong> - Headless CMS, <br> HTML, CSS, JavaScript</p>
+        <p><strong>Date</strong> - 2022</p>
+        <button class="projects-btn">Read more</button>
+        <img id="portfolio-mockup" src="assets/images/portfolio-mockup.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-wrap">
+    <h2 id="contact">Message me</h2>
+    <div class="contact-content">
+      <div class="contact-left">
+        <p>Do you have any questions or a cool project for <br> me?
+          Fill out the fields below and submit the form!</p>
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+          <input type="hidden" name="access_key" value="ed8ac29c-1a4f-4153-82df-f61b2d37e0bc">
+
+          <input type="text" placeholder="Your name" name="name" required> <br>
+          <input type="email" placeholder="Your e-mail" name="email" required> <br>
+          <input type="text" placeholder="Subject" name="subject" /> <br>
+          <textarea name="message" placeholder="Your message..." required></textarea> <br>
+          <input type="hidden" name="redirect" value="https://web3forms.com/success">
+          <button class="submitbtn" type="submit">Submit</button>
+        </form>
+      </div>
+
+
+      <img id="callme" src="assets/images/call-me-maybe.png" alt="">
+
+    </div>
+  </div>
+  <footer>
+    <div class="icons-wrap">
+      <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img src="assets/icons/icon-linkedin.svg"
+          alt=""></a>
+      <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg" alt=""></a>
+      <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg" alt=""></a>
+    </div>
+    <span>© BALAZS JANOSKA 2022</span>
+    <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png"
+        alt=""></button>
+  </footer>
+</body>
+
+</html>
