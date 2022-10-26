@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/index.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+    </style>
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Balazs Janoska</title>
+</head>
+
+<body>
+    <header id="header">
+
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand-c hvr-rotate" href="index.html">JB</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Balazs Janoska</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#myCarousel">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Balazs-Janoska-CV.pdf" target="_blank">CV</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="hero-section">
+        <div class="hero-title">
+            <h1 class="cases-h1">
+                Portfolio <br> for an artist
+            </h1>
+            <h2 class="cases-h2">
+                <strong>Role</strong> - Developer <br>
+                <strong>Technologies</strong> - Headless CMS,
+                Wordpress' API, JavaScript, HTML, CSS
+            </h2>
+            <a href="#start"><button class="getstarted-btn">Get started</button></a>
+            <a href="https://mmd.ucn.dk/class/MDE-CSD-S21/10407765/Semester%2002/Exam-Project/" target="_blank"><button
+                    class="projects-btn demo-btn">Demo</button></a>
+        </div>
+        <img class="hero-mockup" src="assets/images/portfolio-mockup.png" alt="portfolio mockup">
+    </div>
+    <main>
+        <div id="start" class="green-section">
+            <h2>A problem to solve</h2>
+            <p>For our second semester exam project, we had to find a client in need of a website. We found Zoja,
+                an artist, who wanted to showcase more than a hundred of her art pieces on her portfolio, that needed a
+                redesign, too.
+                Uploading that many images would have been a bad idea - performance wise -, so we had to come up with a
+                way to keep the website as lightweight as possible.</p>
+        </div>
+        <div class="case-desc1 reveal">
+            <h2>Development process</h2>
+
+            <p>I was responsible for developing the website, following the design provided by my group members. For the
+                technical realization of the product, HTML5, CSS3 and JavaScript were used. The images were optimized with Adobe Photoshop
+                to improve the overall SEO and to make the website more lightweight. To ensure that the website is
+                dynamic and loads fast, the art pieces
+                were first uploaded to WordPress into private posts, with Advanced Custom Fields.
+            </p>
+            <p>The use of Advance Custom Fields helped to structure the information about the art pieces
+                and get it ready to display later on the website through the Rest API of WordPress, using it as a
+                headless CMS. The API transfers the data,
+                and we are able to display the image and the related metadata with the use of JavaScript. We managed to
+                implement functional elements in the code, such as breadcrumbs, call-to action buttons (‘Read more’,
+                ‘Full list’), a well-defined navigation that turns into a burger menu
+                when adjusting to mobile screens, a “to the top” button, and a fully working contact form through an API
+                called web3forms.</p>
+            <img src="assets/images/portfolio-mockup2.png" alt="portfolio mockup">
+            <h2> Responsiveness and SEO
+            </h2>
+            <p>As for the responsiveness of the multimedia product, we mostly used view-width, view-height,
+                percentages, and rems. We avoided using fixed units that would limit the responsiveness. Most
+                elements of the website were built using the grid system of CSS, as it makes the media query
+                adjustments easier. The burger menu was implemented with Bootstrap, which is an open source library of
+                well
+                tested components.</p>
+
+            <p>SEO measures were also implemented, in the form of respecting semantic structures,
+                optimizing all featured images and giving them fitting alt texts. The product turned out to be
+                17 megabytes in total, making it quite fast to load, which we considered a success as the index
+                page loaded in only 204ms with disabled cache and no throttling (with fast internet
+                connection). The last step of the process was the validation of code, which concluded the development of
+                the product.</p>
+
+
+            <img src="assets/images/portfolio-landing-iphone.png" class="portfolio-mockup-iphone" alt="portfolio mockup iphone">
+            <img src="assets/images/portfolio-iphone.png" class="portfolio-mockup-iphone" alt="portfolio mockup iphone">
+
+        </div>
+
+    </main>
+    <footer>
+        <div class="icons-wrap">
+            <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img
+                    src="assets/icons/icon-linkedin.svg" alt=""></a>
+            <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg" alt="mail icon"></a>
+            <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg" alt="github icon"></a>
+        </div>
+        <span>© BALAZS JANOSKA 2022</span>
+        <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png" alt="up arrow icon"></button>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/index.js"></script>
+  <script src="assets/apod.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+  </style>
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Balazs Janoska</title>
+</head>
+
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+          <div class="container-fluid">
+            <a class="navbar-brand-c hvr-rotate" href="index.html">JB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Balazs Janoska</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#myCarousel">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Balazs-Janoska-CV.pdf" target="_blank">CV</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+    <main>
+        <div class="apod-wrapper">
+        </div>
+    </main>
+
+    <footer>
+      <div class="icons-wrap">
+          <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img
+                  src="assets/icons/icon-linkedin.svg" alt=""></a>
+          <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg" alt="mail icon"></a>
+          <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg" alt="github icon"></a>
+      </div>
+      <span>© BALAZS JANOSKA 2022</span>
+      <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png" alt="top icon"></button>
+  </footer>
+</body>
+
+</html>

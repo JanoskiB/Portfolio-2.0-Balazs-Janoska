@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/index.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+    </style>
+      <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+      <link rel="manifest" href="assets/favicons/site.webmanifest">
+      <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">    
+    <title>Balazs Janoska</title>
+</head>
+
+<body>
+    <header id="header">
+
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand-c hvr-rotate" href="index.html">JB</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Balazs Janoska</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#myCarousel">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Balazs-Janoska-CV.pdf" target="_blank">CV</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="hero-section">
+            <div class="hero-title">
+                <h1 class="cases-h1">
+                    Instagram <br> caption <br> generator <br> Web API
+                </h1>
+                <h2 class="cases-h2">
+                    <strong>Role</strong> - Developer <br>
+                    <strong>Technologies</strong> - Node.js, MSSQL, <br>
+                    JavaScript, HTML, CSS, Azure
+                </h2>
+                <a href="#start"><button class="getstarted-btn">Get started</button></a>
+                <a href="https://mmd.ucn.dk/class/MDE-CSD-S21/10407765/Elective%20Exam/Web_API-Frontend_Group02/" target="_blank"><button class="projects-btn demo-btn">Demo</button></a>
+
+            </div>
+            <img class="hero-mockup" src="assets/images/webapi-mockup.png" style="scale:.9;" alt="instagram caption generator mockup">
+        </div>
+        <div id="start" class="green-section">
+            <h2>Why would we build this project?</h2>
+            <p>In September of 2022, during the Web API elective at UCN, every study group had to come up with an idea
+                for a Web API, that would also be our exam project. The solution was supposed to be able to Create, Read, Update and
+                Delete data (CRUD). After a short time of thinking, our group thought that an Instagram Caption
+                Generator with a rich database would be a fun and useful project to solve.</p>
+        </div>
+        <div class="case-desc1 reveal">
+            <p> On top of handling CRUD requests, an other goal for the project was for it to be able to
+                authenticate
+                users
+                and securely store their data. Different user roles were meant to have different authorities to
+                perform
+                certain actions. For example, only a registered and logged in user could upload new captions, and
+                only
+                an
+                admin could delete users.</p>
+        </div>
+        </div>
+        <div class="case-desc1 reveal">
+            <h2>The challenge</h2>
+            <p>The project served as an introduction to back-end development, so that us, front-end developers got a
+                better understanding of how the logic and data is connected behind the curtains. We had to get familiar
+                with  ERD's, Node modules like Express, Cors, Bcryptjs, Joi, Jsonwebtoken and Lodash. The data was stored on
+                UCN’s MSSQL server, so we also gained experience working with a structured query language. </p>
+            <img src="assets/images/ERD.jpg" style="width:80vw ;" alt="entity relationship diagram">
+            <h2>
+                My role in the project
+            </h2>
+            <p>Our group consisted of three people. Two of us, including me, worked on setting up the database and
+                developing the logic of the back end. The third member gathered captions for the product and set up most of the front
+                end. Creating and deploying our own API and working with back end tools was highly beneficial for me, as a front end
+                developer. I gained valuable knowledge that helps me understand how web applications are built, how data
+                is stored and connected, and I
+                became able to build one myself.</p>
+        </div>
+    </main>
+    <footer>
+        <div class="icons-wrap">
+            <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img
+                    src="assets/icons/icon-linkedin.svg" alt=""></a>
+            <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg" alt="mail icon"></a>
+            <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg" alt="github icon"></a>
+        </div>
+        <span>© BALAZS JANOSKA 2022</span>
+        <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png" alt="up arrow"></button>
+    </footer>
+</body>
+
+</html>

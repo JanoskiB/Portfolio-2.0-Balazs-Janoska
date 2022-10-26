@@ -15,6 +15,13 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
   </style>
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
   <title>Balazs Janoska</title>
 </head>
 
@@ -23,7 +30,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand-c" href="index.html">JB</a>
+        <a class="navbar-brand-c hvr-rotate" href="index.html">JB</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
@@ -37,7 +44,7 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#myCarousel">Projects</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#about">About</a>
@@ -60,24 +67,26 @@
       <h2>front-end developer, content creator <br>
         & marketing specialist</h2>
     </div>
-    <img src="assets/images/spaceship.png" alt="">
+    <img src="assets/images/spaceship-svg.svg" class="spaceship" alt="spaceship">
   </div>
-  <div id="about" class="about-wrap">
-    <img src="assets/images/Balazs-portrait.png" alt="">
-    <div class="about-text">
-      <h2>Hi, I'm Balázs</h2>
-      <p>I’m a multimedia design student at UCN Aalborg, currently
-        looking for an internship related to front-end development
-        and/or content creation. <br> 
 
-        If I had to describe myself briefly, I'd say that I'm an open minded and friendly guy
-        who's always ready to explore and learn new stuff. <br> Do you want to get to know me better? 
+  <div id="about" class="about-wrap reveal">
+    <img src="assets/images/Balazs-portrait.png" alt="Balazs Janoska">
+    <div class="about-text ">
+      <h2>Hello there!</h2>
+      <p>
+        I'm Balázs, a 25 years old multimedia design student studying at UCN Aalborg. I'm currently looking for an
+        internship at a nice company that would appreciate a young and fresh mind who's happy to help with front-end
+        development and/or content creation.</p>
+      <p>If I had to describe myself briefly, I'd say that I'm an open minded and friendly guy,
+        who's always ready to explore and learn new stuff. I'm a problem solver, who's always looking for the most
+        efficient ways. If you think that we could achieve something amazing together, shoot me a <a class="link"
+          href="#contact">message</a>!
       </p>
-      <button class="about-btn">Read more</button>
     </div>
   </div>
-  <div class="skills-wrap">
-    <h2>How can I help you? <span><img id="helpimg" src="assets/icons/list.png" alt=""></span></h2>
+  <div class="skills-wrap reveal">
+    <h2>How can I help you? <span><img id="helpimg" src="assets/icons/list.png" alt="List icon"></span></h2>
     <div class="skill-card-wrap">
       <div class="skill-card">
         <h2>Front-end development</h2>
@@ -98,7 +107,92 @@
       </div>
     </div>
   </div>
-  <div id="projects" class="projects-wrap">
+
+  <div id="myCarousel" class="carousel carousel-fade reveal" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+
+
+
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="8000">
+        <div class="container-carousel">
+          <div class="carousel-text">
+            <h2>Instagram caption <br> generator Web API</h2>
+            <p><strong>Role</strong> - Developer</p>
+            <p><strong>Technologies</strong> - JavaScript, HTML, <br> CSS, Node.js, MSSQL</p>
+            <p><strong>Duration</strong> - 1 month</p>
+            <a href="instagram-caption-generator-web-api.html"><button class="projects-btn">Read more</button>
+            </a>
+          </div>
+          <div class="carousel-img-webapi">
+            <img src="assets/images/webapi-mockup.png" style="scale: .8; margin-bottom: 10rem;" alt="Instagram caption generator web api mockup">
+          </div>
+        </div>
+      </div>
+      
+      <div class="carousel-item" data-bs-interval="8000">
+        <div class="container-carousel">
+          <div class="carousel-text">
+            <h2>Portfolio for an artist</h2>
+            <p><strong>Role</strong> - Developer</p>
+            <p><strong>Technologies</strong> - Headless CMS, <br> HTML, CSS, JavaScript</p>
+            <p><strong>Duration</strong> - 1 month</p>
+            <a href="artists-portfolio.html"><button class="projects-btn">Read more</button></a>
+          </div>
+          <div class="carousel-img">
+            <img id="portfolio-mockup" src="assets/images/portfolio-mockup.png" style="scale: .8" alt="Portfolio for an artist mockup laptop">
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="8000">
+        <div class="container-carousel">
+          <div class="carousel-text">
+            <h2>My fishing blog <br> on Instagram</h2>
+            <p><strong>Role</strong> - Content creator</p>
+            <p><strong>Achievements</strong> - 800 + organic followers, <br> 12% engagement rate</p>
+            <p><strong>Duration</strong> - 2 years</p>
+            <a href="barbless-balage.html"><button class="projects-btn">Read more</button></a>
+          </div>
+          <div class="carousel-img">
+            <img id="barbless-mockup" src="assets/images/barbless-mockup.png" alt="Barbless Balage on instagram mockup iphone">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="8000">
+        <div class="container-carousel">
+          <div class="carousel-text">
+            <h2>Astronomy picture <br> of the day</h2>
+            <p><strong>Miniproject</strong> - because it fits the vibe of my portfolio</p>
+            <p><strong>Technologies</strong> - NASA's API, <br> HTML, CSS, JavaScript</p>
+            <a href="apod.html"><button class="projects-btn">Read more</button></a>
+          </div>
+          <div class="carousel-img">
+            <img id="apod" src="assets/images/apod.jpg" itemid="apod" alt="astronomy picture of the day">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <a href="#myCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
+      <span class="sr-only"></span>
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a href="#myCarousel" class="carousel-control-next" role="button" data-bs-slide="next">
+      <span class="sr-only"></span>
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+  </div>
+
+
+  <!-- <div id="projects" class="projects-wrap">
     <h2>Recent projects <span><img id="calendar" src="assets/icons/calendar.png" alt=""></span></h2>
     <div class="projects-grid">
       <div class="project-card">
@@ -106,7 +200,8 @@
         <p><strong>Role</strong> - Developer</p>
         <p><strong>Technologies</strong> - JavaScript, HTML, <br> CSS, Node.js, MSSQL</p>
         <p><strong>Date</strong> - 2022</p>
-        <button class="projects-btn">Read more</button>
+        <a href="webapi.html"><button class="projects-btn">Read more</button>
+        </a>
         <img src="assets/images/webapi-mockup.png" alt="">
       </div>
     </div>
@@ -117,7 +212,7 @@
         <p><strong>Role</strong> - Content creator</p>
         <p><strong>Achievements</strong> - 800 + organic followers, <br> 12% engagement rate</p>
         <p><strong>Date</strong> - 2020 - Present</p>
-        <button class="projects-btn">Read more</button>
+        <a href="barbless-balage.html"><button class="projects-btn">Read more</button></a>
         <img id="barbless-mockup" src="assets/images/barbless-mockup.png" alt="">
       </div>
     </div>
@@ -128,13 +223,13 @@
         <p><strong>Role</strong> - Developer</p>
         <p><strong>Technologies</strong> - Headless CMS, <br> HTML, CSS, JavaScript</p>
         <p><strong>Date</strong> - 2022</p>
-        <button class="projects-btn">Read more</button>
+        <a href="artists-portfolio.html"><button class="projects-btn">Read more</button></a>
         <img id="portfolio-mockup" src="assets/images/portfolio-mockup.png" alt="">
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="contact-wrap">
+  <div class="contact-wrap reveal">
     <h2 id="contact">Message me</h2>
     <div class="contact-content">
       <div class="contact-left">
@@ -162,12 +257,11 @@
     <div class="icons-wrap">
       <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img src="assets/icons/icon-linkedin.svg"
           alt=""></a>
-      <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg" alt=""></a>
-      <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg" alt=""></a>
+      <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg" alt="mail icon"></a>
+      <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg" alt="github icon"></a>
     </div>
     <span>© BALAZS JANOSKA 2022</span>
-    <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png"
-        alt=""></button>
+    <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png" alt="icon up"></button>
   </footer>
 </body>
 
