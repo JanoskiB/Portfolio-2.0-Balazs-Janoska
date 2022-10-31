@@ -44,10 +44,10 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" href="#myCarousel">Projects</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#myCarousel">Projects</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Balazs-Janoska-CV.pdf" target="_blank">CV</a>
@@ -67,7 +67,7 @@
       <h2>front-end developer, content creator <br>
         & marketing specialist</h2>
     </div>
-    <img src="assets/images/spaceship-svg.svg" class="spaceship" alt="spaceship">
+    <img src="assets/images/spaceship.png" class="spaceship" alt="spaceship">
   </div>
 
   <div id="about" class="about-wrap reveal">
@@ -79,7 +79,7 @@
         internship at a nice company that would appreciate a young and fresh mind who's happy to help with front-end
         development and/or content creation.</p>
       <p>If I had to describe myself briefly, I'd say that I'm an open minded and friendly guy,
-        who's always ready to explore and learn new stuff. I'm a problem solver, who's always looking for the most
+        who's always ready to explore and learn new concepts. I'm a problem solver, who's always looking for the most
         efficient ways. If you think that we could achieve something amazing together, shoot me a <a class="link"
           href="#contact">message</a>!
       </p>
@@ -92,15 +92,15 @@
         <h2>Front-end development</h2>
         <ul>
           <li>HTML, CSS, JavaScript</li>
-          <li>Web API development</li>
           <li>Wordpress</li>
+          <li>Web API development</li>
           <li>Vue.js, Node.js & MSSQL</li>
         </ul>
       </div>
       <div class="skill-card">
         <h2>Content creation</h2>
         <ul>
-          <li>Photo & Video editing</li>
+          <li>Photo & Video editing <br> with Adobe tools</li>
           <li>Photography & Videography</li>
           <li>Social Media management</li>
         </ul>
@@ -108,18 +108,34 @@
     </div>
   </div>
 
+
   <div id="myCarousel" class="carousel carousel-fade reveal" data-bs-ride="carousel">
     <ol class="carousel-indicators">
       <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
       <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
       <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
       <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
-
-
-
     </ol>
+
     <div class="carousel-inner">
+      <h2 id="projects">Check out some of my recent projects <span><img id="calendar" src="assets/icons/calendar.png" alt=""></span></h2>
       <div class="carousel-item active" data-bs-interval="8000">
+        <div class="container-carousel">
+          <div class="carousel-text">
+            <h2>Portfolio for an artist</h2>
+            <p><strong>Role</strong> - Developer</p>
+            <p><strong>Technologies</strong> - Headless CMS, <br> HTML, CSS, JavaScript</p>
+            <p><strong>Duration</strong> - 1 month</p>
+            <a href="artists-portfolio.html"><button class="projects-btn">Read more</button></a>
+          </div>
+          <div class="carousel-img">
+            <img id="portfolio-mockup" src="assets/images/portfolio-mockup.png" style="scale: .8"
+              alt="Portfolio for an artist mockup laptop">
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="8000">
         <div class="container-carousel">
           <div class="carousel-text">
             <h2>Instagram caption <br> generator Web API</h2>
@@ -130,22 +146,8 @@
             </a>
           </div>
           <div class="carousel-img-webapi">
-            <img src="assets/images/webapi-mockup.png" style="scale: .8; margin-bottom: 10rem;" alt="Instagram caption generator web api mockup">
-          </div>
-        </div>
-      </div>
-      
-      <div class="carousel-item" data-bs-interval="8000">
-        <div class="container-carousel">
-          <div class="carousel-text">
-            <h2>Portfolio for an artist</h2>
-            <p><strong>Role</strong> - Developer</p>
-            <p><strong>Technologies</strong> - Headless CMS, <br> HTML, CSS, JavaScript</p>
-            <p><strong>Duration</strong> - 1 month</p>
-            <a href="artists-portfolio.html"><button class="projects-btn">Read more</button></a>
-          </div>
-          <div class="carousel-img">
-            <img id="portfolio-mockup" src="assets/images/portfolio-mockup.png" style="scale: .8" alt="Portfolio for an artist mockup laptop">
+            <img src="assets/images/webapi-mockup.png" style="scale: .8; margin-bottom: 10rem;"
+              alt="Instagram caption generator web api mockup">
           </div>
         </div>
       </div>
@@ -160,9 +162,9 @@
             <a href="barbless-balage.html"><button class="projects-btn">Read more</button></a>
           </div>
           <div class="carousel-img">
-            <img id="barbless-mockup" src="assets/images/barbless-mockup.png" alt="Barbless Balage on instagram mockup iphone">
+            <img id="barbless-mockup" src="assets/images/barbless-mockup.png"
+              alt="Barbless Balage on instagram mockup iphone">
           </div>
-
         </div>
       </div>
 
@@ -170,12 +172,12 @@
         <div class="container-carousel">
           <div class="carousel-text">
             <h2>Astronomy picture <br> of the day</h2>
-            <p><strong>Miniproject</strong> - because it fits the vibe of my portfolio</p>
-            <p><strong>Technologies</strong> - NASA's API, <br> HTML, CSS, JavaScript</p>
+            <p><strong>Miniproject</strong> <br> because it fits the vibe of my portfolio</p>
+            <p><strong>Technologies</strong> - NASA's API, HTML, CSS, JavaScript <br></p>
             <a href="apod.html"><button class="projects-btn">Read more</button></a>
           </div>
           <div class="carousel-img">
-            <img id="apod" src="assets/images/apod.jpg" itemid="apod" alt="astronomy picture of the day">
+            <img id="apod" src="assets/images/apod.jpg" alt="astronomy picture of the day">
           </div>
         </div>
       </div>
@@ -230,7 +232,7 @@
   </div> -->
 
   <div class="contact-wrap reveal">
-    <h2 id="contact">Message me</h2>
+    <h2 id="contact">Send me a message</h2>
     <div class="contact-content">
       <div class="contact-left">
         <p>Do you have any questions or a cool project for <br> me?
@@ -257,8 +259,10 @@
     <div class="icons-wrap">
       <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img src="assets/icons/icon-linkedin.svg"
           alt=""></a>
-      <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg" alt="mail icon"></a>
-      <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg" alt="github icon"></a>
+      <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg"
+          alt="mail icon"></a>
+      <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg"
+          alt="github icon"></a>
     </div>
     <span>© BALAZS JANOSKA 2022</span>
     <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png" alt="icon up"></button>

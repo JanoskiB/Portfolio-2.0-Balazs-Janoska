@@ -15,13 +15,13 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
     </style>
-      <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-      <link rel="manifest" href="assets/favicons/site.webmanifest">
-      <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-      <meta name="msapplication-TileColor" content="#da532c">
-      <meta name="theme-color" content="#ffffff">    
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <title>Balazs Janoska</title>
 </head>
 
@@ -73,19 +73,23 @@
                     JavaScript, HTML, CSS, Azure
                 </h2>
                 <a href="#start"><button class="getstarted-btn">Get started</button></a>
-                <a href="https://mmd.ucn.dk/class/MDE-CSD-S21/10407765/Elective%20Exam/Web_API-Frontend_Group02/" target="_blank"><button class="projects-btn demo-btn">Demo</button></a>
+                <a href="https://mmd.ucn.dk/class/MDE-CSD-S21/10407765/Elective%20Exam/Web_API-Frontend_Group02/"
+                    target="_blank"><button class="projects-btn demo-btn">Demo</button></a>
 
             </div>
-            <img class="hero-mockup" src="assets/images/webapi-mockup.png" style="scale:.9;" alt="instagram caption generator mockup">
+            <img class="hero-mockup" src="assets/images/webapi-mockup.png" style="scale:.9;"
+                alt="instagram caption generator mockup">
         </div>
         <div id="start" class="green-section">
             <h2>Why would we build this project?</h2>
             <p>In September of 2022, during the Web API elective at UCN, every study group had to come up with an idea
-                for a Web API, that would also be our exam project. The solution was supposed to be able to Create, Read, Update and
+                for a Web API, that would also be our exam project. The solution was supposed to be able to Create,
+                Read, Update and
                 Delete data (CRUD). After a short time of thinking, our group thought that an Instagram Caption
                 Generator with a rich database would be a fun and useful project to solve.</p>
         </div>
         <div class="case-desc1 reveal">
+            <h2>The challenge</h2>
             <p> On top of handling CRUD requests, an other goal for the project was for it to be able to
                 authenticate
                 users
@@ -95,35 +99,44 @@
                 only
                 an
                 admin could delete users.</p>
-        </div>
-        </div>
-        <div class="case-desc1 reveal">
-            <h2>The challenge</h2>
+
             <p>The project served as an introduction to back-end development, so that us, front-end developers got a
                 better understanding of how the logic and data is connected behind the curtains. We had to get familiar
-                with  ERD's, Node modules like Express, Cors, Bcryptjs, Joi, Jsonwebtoken and Lodash. The data was stored on
+                with ERD's, Node modules like Express, Cors, Bcryptjs, Joi, Jsonwebtoken and Lodash. The data was stored
+                on
                 UCN’s MSSQL server, so we also gained experience working with a structured query language. </p>
             <img src="assets/images/ERD.jpg" style="width:80vw ;" alt="entity relationship diagram">
             <h2>
                 My role in the project
             </h2>
-            <p>Our group consisted of three people. Two of us, including me, worked on setting up the database and
-                developing the logic of the back end. The third member gathered captions for the product and set up most of the front
-                end. Creating and deploying our own API and working with back end tools was highly beneficial for me, as a front end
+            <p>Our group consisted of three people. I spent the most time working on setting up the database and the
+                routing as well as
+                connecting the back-end with the front-end. The other developer focused on the authentication part of
+                the web-app, while the third member gathered captions of different moods and lengths, and prototyped the
+                full concept of the product. </p>
+            <p>Creating and deploying our own API and working with back-end tools was
+                highly beneficial for me, as
+                a front-end
                 developer. I gained valuable knowledge that helps me understand how web applications are built, how data
                 is stored and connected, and I
                 became able to build one myself.</p>
+
+            <img src="assets/images/webapi-code.png" style="width: 80vw; margin-bottom: 2rem;" alt="">
+        </div>
         </div>
     </main>
     <footer>
         <div class="icons-wrap">
             <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img
                     src="assets/icons/icon-linkedin.svg" alt=""></a>
-            <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg" alt="mail icon"></a>
-            <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg" alt="github icon"></a>
+            <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg"
+                    alt="mail icon"></a>
+            <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg"
+                    alt="github icon"></a>
         </div>
         <span>© BALAZS JANOSKA 2022</span>
-        <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png" alt="up arrow"></button>
+        <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png"
+                alt="up arrow"></button>
     </footer>
 </body>
 

@@ -81,48 +81,65 @@
     <main>
         <div id="start" class="green-section">
             <h2>A problem to solve</h2>
-            <p>For our second semester exam project, we had to find a client in need of a website. We found Zoja,
-                an artist, who wanted to showcase more than a hundred of her art pieces on her portfolio, that needed a
-                redesign, too.
-                Uploading that many images would have been a bad idea - performance wise -, so we had to come up with a
-                way to keep the website as lightweight as possible.</p>
+            <p>For our second semester exam project, we had to find a client in need of a website. We found Zoja, an
+                artist, who wanted to showcase more than a hundred of her art pieces on her portfolio, that needed a
+                redesign, too. Uploading that many images would have been a bad idea - performance wise - so we had to
+                come up with a way to keep the website as lightweight as possible.</p>
         </div>
         <div class="case-desc1 reveal">
             <h2>Development process</h2>
 
-            <p>I was responsible for developing the website, following the design provided by my group members. For the
-                technical realization of the product, HTML5, CSS3 and JavaScript were used. The images were optimized with Adobe Photoshop
-                to improve the overall SEO and to make the website more lightweight. To ensure that the website is
-                dynamic and loads fast, the art pieces
-                were first uploaded to WordPress into private posts, with Advanced Custom Fields.
+            <p>My main responsibility in the project was to technically implement the website based on the high-fidelity
+                mockups I recieved from the design team.
             </p>
-            <p>The use of Advance Custom Fields helped to structure the information about the art pieces
-                and get it ready to display later on the website through the Rest API of WordPress, using it as a
-                headless CMS. The API transfers the data,
-                and we are able to display the image and the related metadata with the use of JavaScript. We managed to
-                implement functional elements in the code, such as breadcrumbs, call-to action buttons (‘Read more’,
-                ‘Full list’), a well-defined navigation that turns into a burger menu
-                when adjusting to mobile screens, a “to the top” button, and a fully working contact form through an API
-                called web3forms.</p>
-            <img src="assets/images/portfolio-mockup2.png" alt="portfolio mockup">
-            <h2> Responsiveness and SEO
+
+            <img src="assets/images/portfolio-prototype1.png" alt="">
+            <img src="assets/images/portfolio-prototype2.png" alt="">
+            <p>As a first step, I set up the necessary folders on GitHub. Then, using HTML5 and CSS3 I coded a
+                wireframe where the main UI elements of the website were represented by divs. At this point I had the
+                basic structure of the website, and I needed to fill it up with content. </p>
+            <p>
+                Next, I optimized the images in Adobe Photoshop, to reduce their size in an attempt to make the website
+                more lightweight and load faster.
+            </p>
+            <h2> Making a dynamic website
             </h2>
-            <p>As for the responsiveness of the multimedia product, we mostly used view-width, view-height,
-                percentages, and rems. We avoided using fixed units that would limit the responsiveness. Most
-                elements of the website were built using the grid system of CSS, as it makes the media query
-                adjustments easier. The burger menu was implemented with Bootstrap, which is an open source library of
-                well
-                tested components.</p>
+            <p>Given that there would be more than a hundred artpieces showcased on the website, we had to come up with
+                a solution to ensure that the loading time and maintanence of the website are optimal.</p>
 
-            <p>SEO measures were also implemented, in the form of respecting semantic structures,
-                optimizing all featured images and giving them fitting alt texts. The product turned out to be
-                17 megabytes in total, making it quite fast to load, which we considered a success as the index
-                page loaded in only 204ms with disabled cache and no throttling (with fast internet
-                connection). The last step of the process was the validation of code, which concluded the development of
-                the product.</p>
+            <p>We decided to use WordPress’s REST API as a headless CMS to tackle the problem of the vast volume of
+                content. This way the images and the metadata are not stored in the root directory of the website,
+                instead they are stored as private posts on WordPress.</p>
 
+            <p>We structured the images and the related metadata with WordPress’s Advanced Custom Fields plugin.</p>
 
-            <img src="assets/images/portfolio-landing-iphone.png" class="portfolio-mockup-iphone" alt="portfolio mockup iphone">
+            <img src="assets/images/advanced-custom-fields.png" style="width:80% ;" alt="">
+
+            <p>The use of Advance Custom Fields helped to structure the information about the art pieces
+                and get it ready to display later on the website through the Rest API. </p>
+
+            <p>In order to fetch the data from WorPress we used the POST method, since we had to authorize ourselves by
+                sending a username and password to get access to the private posts. A few extra lines of JavaScript
+                later, the website was able to dinamically display the content.</p>
+
+            <img src="assets/images/wordpress-fetch.png" style="width:45% ;" alt="">
+            <img src="assets/images/portfolio-js.jpg" style="width:40% ;" alt="">
+
+            <h2>Responsiveness and SEO</h2>
+
+            <p>As for the responsiveness of the multimedia product, we mostly used view-width, view-height, percentages,
+                and rems. We avoided using fixed units that would limit the responsiveness. Most elements of the website
+                were built using the grid system of CSS, as it makes the media query adjustments easier. The burger menu
+                was implemented with Bootstrap, which is an open source library of well tested components.</p>
+
+            <p>SEO measures were also implemented, in the form of respecting semantic structures, optimizing all
+                featured images and giving them fitting alt texts. The product turned out to be 17 megabytes in total,
+                making it quite fast to load, which we considered a success as the index page loaded in only 204ms with
+                disabled cache and no throttling (with fast internet connection). The last step of the process was the
+                validation of code, which concluded the development of the product.</p>
+
+            <img src="assets/images/portfolio-landing-iphone.png" class="portfolio-mockup-iphone"
+                alt="portfolio mockup iphone">
             <img src="assets/images/portfolio-iphone.png" class="portfolio-mockup-iphone" alt="portfolio mockup iphone">
 
         </div>
@@ -132,11 +149,14 @@
         <div class="icons-wrap">
             <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img
                     src="assets/icons/icon-linkedin.svg" alt=""></a>
-            <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg" alt="mail icon"></a>
-            <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg" alt="github icon"></a>
+            <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg"
+                    alt="mail icon"></a>
+            <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg"
+                    alt="github icon"></a>
         </div>
         <span>© BALAZS JANOSKA 2022</span>
-        <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png" alt="up arrow icon"></button>
+        <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png"
+                alt="up arrow icon"></button>
     </footer>
 
 </body>
