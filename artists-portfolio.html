@@ -28,7 +28,6 @@
 
 <body>
     <header id="header">
-
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand-c hvr-rotate" href="index.html">JB</a>
@@ -39,7 +38,7 @@
                 <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Balazs Janoska</h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a href="index.html">Balazs Janoska</a></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
@@ -70,13 +69,13 @@
             <h2 class="cases-h2">
                 <strong>Role</strong> - Developer <br>
                 <strong>Technologies</strong> - Headless CMS,
-                Wordpress' API, JavaScript, HTML, CSS
+                Wordpress' API, <br> JavaScript, HTML, CSS
             </h2>
             <a href="#start"><button class="getstarted-btn">Get started</button></a>
             <a href="https://mmd.ucn.dk/class/MDE-CSD-S21/10407765/Semester%2002/Exam-Project/" target="_blank"><button
                     class="projects-btn demo-btn">Demo</button></a>
         </div>
-        <img class="hero-mockup" src="assets/images/portfolio-mockup.png" alt="portfolio mockup">
+        <img class="hero-mockup-portfolio" src="assets/images/portfolio-mockup.png" alt="portfolio mockup">
     </div>
     <main>
         <div id="start" class="green-section">
@@ -86,15 +85,15 @@
                 redesign, too. Uploading that many images would have been a bad idea - performance wise - so we had to
                 come up with a way to keep the website as lightweight as possible.</p>
         </div>
-        <div class="case-desc1 reveal">
+        <div class="case-desc reveal">
             <h2>Development process</h2>
 
             <p>My main responsibility in the project was to technically implement the website based on the high-fidelity
                 mockups I recieved from the design team.
             </p>
 
-            <img src="assets/images/portfolio-prototype1.png" alt="">
-            <img src="assets/images/portfolio-prototype2.png" alt="">
+            <img class="imgwidth-mobile" src="assets/images/portfolio-prototype1.png" alt="">
+            <img class="imgwidth-mobile" src="assets/images/portfolio-prototype2.png" alt="">
             <p>As a first step, I set up the necessary folders on GitHub. Then, using HTML5 and CSS3 I coded a
                 wireframe where the main UI elements of the website were represented by divs. At this point I had the
                 basic structure of the website, and I needed to fill it up with content. </p>
@@ -146,19 +145,20 @@
 
     </main>
     <footer>
-        <div class="icons-wrap">
-            <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img
-                    src="assets/icons/icon-linkedin.svg" alt=""></a>
+        <div class="footer-wrap">
+          <div class="icons-wrap">
+            <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img src="assets/icons/icon-linkedin.svg"
+                alt=""></a>
             <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg"
-                    alt="mail icon"></a>
+                alt="mail icon"></a>
             <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg"
-                    alt="github icon"></a>
+                alt="github icon"></a>
+          </div>
+          <span>© BALAZS JANOSKA 2022</span>
+          <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png"
+              alt="icon up"></button>
         </div>
-        <span>© BALAZS JANOSKA 2022</span>
-        <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png"
-                alt="up arrow icon"></button>
-    </footer>
-
+      </footer>
 </body>
 
 </html>
