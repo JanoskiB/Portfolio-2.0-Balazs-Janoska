@@ -663,6 +663,11 @@ form>input::placeholder {
     width: 30vw;
 }
 
+.hero-mockup-igcaption {
+position: relative;
+top: 15%;
+}
+
 #reelmockup {
     margin-left: 35%;
 }
@@ -749,7 +754,7 @@ form>input::placeholder {
 
 /* Responsive mode */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 800px) {
 
 
     html {
@@ -1014,7 +1019,6 @@ form>input::placeholder {
     .hero-mockup-igcaption {
         scale: .42;
         position: relative;
-        bottom: 3%;
         right: 27%;
     }
 
