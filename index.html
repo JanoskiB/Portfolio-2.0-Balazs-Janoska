@@ -38,7 +38,7 @@
         <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Balazs Janoska</h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a href="index.html">Balazs Janoska</a></h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
@@ -64,14 +64,16 @@
   <div class="hero-section">
     <div class="hero-title">
       <h1>Balázs <br> Jánoska</h1>
-      <h2>front-end developer, content creator <br>
+      <h2>front-end developer, <br> content creator <br>
         & marketing specialist</h2>
+        <img src="assets/images/spaceship.png" class="spaceship-mobile" alt="spaceship">
+
     </div>
     <img src="assets/images/spaceship.png" class="spaceship" alt="spaceship">
   </div>
 
-  <div id="about" class="about-wrap reveal">
-    <img src="assets/images/Balazs-portrait.png" alt="Balazs Janoska">
+  <div id="about" class="about-wrap">
+    <img src="assets/images/Balazs-portrait.png" class="portrait" alt="Balazs Janoska">
     <div class="about-text ">
       <h2>Hello there!</h2>
       <p>
@@ -85,7 +87,7 @@
       </p>
     </div>
   </div>
-  <div class="skills-wrap reveal">
+  <div class="skills-wrap">
     <h2>How can I help you? <span><img id="helpimg" src="assets/icons/list.png" alt="List icon"></span></h2>
     <div class="skill-card-wrap">
       <div class="skill-card">
@@ -118,7 +120,8 @@
     </ol>
 
     <div class="carousel-inner">
-      <h2 id="projects">Check out some of my recent projects <span><img id="calendar" src="assets/icons/calendar.png" alt=""></span></h2>
+      <h2 id="projects">Check out some of my recent projects <span><img id="calendar" src="assets/icons/calendar.png"
+            alt=""></span></h2>
       <div class="carousel-item active" data-bs-interval="8000">
         <div class="container-carousel">
           <div class="carousel-text">
@@ -194,18 +197,28 @@
   </div>
 
 
-  <!-- <div id="projects" class="projects-wrap">
-    <h2>Recent projects <span><img id="calendar" src="assets/icons/calendar.png" alt=""></span></h2>
+  <!-- Projects section for mobile  -->
+  <div id="projects" class="projects-wrap">
+    <h2>Recent projects <span><img alt=""></span></h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h2>Portfolio for an artist</h2>
+        <p><strong>Role</strong> - Developer</p>
+        <p><strong>Technologies</strong> - Headless CMS, <br> HTML, CSS, JavaScript</p>
+        <p><strong>Date</strong> - 2022</p>
+        <a href="artists-portfolio.html"><button class="projects-btn">Read more</button></a>
+      </div>
+    </div>
+
     <div class="projects-grid">
       <div class="project-card">
         <h2>Instagram caption generator Web API</h2>
         <p><strong>Role</strong> - Developer</p>
-        <p><strong>Technologies</strong> - JavaScript, HTML, <br> CSS, Node.js, MSSQL</p>
+        <p><strong>Technologies</strong> - JavaScript, HTML, CSS, Node.js, MSSQL</p>
         <p><strong>Date</strong> - 2022</p>
-        <a href="webapi.html"><button class="projects-btn">Read more</button>
+        <a href="instagram-caption-generator-web-api.html"><button class="projects-btn">Read more</button>
         </a>
-        <img src="assets/images/webapi-mockup.png" alt="">
-      </div>
+      </div>    
     </div>
 
     <div class="projects-grid">
@@ -215,27 +228,26 @@
         <p><strong>Achievements</strong> - 800 + organic followers, <br> 12% engagement rate</p>
         <p><strong>Date</strong> - 2020 - Present</p>
         <a href="barbless-balage.html"><button class="projects-btn">Read more</button></a>
-        <img id="barbless-mockup" src="assets/images/barbless-mockup.png" alt="">
       </div>
     </div>
 
     <div class="projects-grid">
       <div class="project-card">
-        <h2>Portfolio for an artist</h2>
-        <p><strong>Role</strong> - Developer</p>
-        <p><strong>Technologies</strong> - Headless CMS, <br> HTML, CSS, JavaScript</p>
-        <p><strong>Date</strong> - 2022</p>
-        <a href="artists-portfolio.html"><button class="projects-btn">Read more</button></a>
-        <img id="portfolio-mockup" src="assets/images/portfolio-mockup.png" alt="">
-      </div>
+        <h2>Astronomy picture <br> of the day</h2>
+        <p><strong>Miniproject</strong> - because it fits the vibe of my portfolio</p>
+        <p><strong>Technologies</strong> - NASA's API, HTML, CSS, JavaScript <br></p>
+        <a href="apod.html"><button class="projects-btn">Read more</button></a>
+      </div>    
     </div>
-  </div> -->
+  </div>
 
-  <div class="contact-wrap reveal">
-    <h2 id="contact">Send me a message</h2>
+  </div>
+
+  <div id="contact" class="contact-wrap">
+    <h2>Send me a message</h2>
     <div class="contact-content">
       <div class="contact-left">
-        <p>Do you have any questions or a cool project for <br> me?
+        <p>Do you have any questions or a cool project for me? <br>
           Fill out the fields below and submit the form!</p>
         <form action="https://api.web3forms.com/submit" method="POST">
 
@@ -256,16 +268,19 @@
     </div>
   </div>
   <footer>
-    <div class="icons-wrap">
-      <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img src="assets/icons/icon-linkedin.svg"
-          alt=""></a>
-      <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg"
-          alt="mail icon"></a>
-      <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg"
-          alt="github icon"></a>
+    <div class="footer-wrap">
+      <div class="icons-wrap">
+        <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img src="assets/icons/icon-linkedin.svg"
+            alt=""></a>
+        <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg"
+            alt="mail icon"></a>
+        <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg"
+            alt="github icon"></a>
+      </div>
+      <span>© BALAZS JANOSKA 2022</span>
+      <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png"
+          alt="icon up"></button>
     </div>
-    <span>© BALAZS JANOSKA 2022</span>
-    <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png" alt="icon up"></button>
   </footer>
 </body>
 
