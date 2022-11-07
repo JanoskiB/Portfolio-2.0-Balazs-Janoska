@@ -672,6 +672,11 @@ position: relative;
 top: 25%;
 }
 
+.hero-mockup-portfolio {
+    position: relative;
+    top: 25%;
+}
+
 #reelmockup {
     margin-left: 35%;
 }
@@ -755,6 +760,7 @@ top: 25%;
 .apod-explanation {
     background-color: #513c8b9e;
 }
+
 
 /* Responsive mode */
 
@@ -1016,7 +1022,7 @@ top: 25%;
     .hero-mockup-portfolio {
         scale: .45;
         position: relative;
-        top: 10%;
+        top: 15%;
         right: 25%;
     }
 
