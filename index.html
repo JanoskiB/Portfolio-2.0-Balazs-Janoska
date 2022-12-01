@@ -11,7 +11,7 @@
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/styles.css">
-  <script src="assets/index.js"></script>
+  <script defer src="assets/index.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
   </style>
@@ -27,45 +27,35 @@
 
 <body>
   <header id="header">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand-c hvr-rotate" href="index.html">JB</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a href="index.html">Balazs Janoska</a></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#projects-wrapper">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Balazs-Janoska-CV.pdf" target="_blank">CV</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <span class="logo">JB</span>
+
+    <nav class="nav-d">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects-wrapper">Projects</a></li>
+        <li><a href="Balazs-Janoska-CV.pdf" target="_blank">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav class="nav-s">
+      <button class="nav__toggle">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#projects-wrapper" class="nav__link">Projects</a></li>
+        <li class="nav__item"><a href="Balazs-Janoska-CV.pdf" target="_blank" class="nav__link">CV</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
     </nav>
 
   </header>
   <div class="hero-section">
     <div class="hero-title">
       <h1>Balázs <br> Jánoska</h1>
-      <h2>  front-end developer <br> & content creator <br></h2>
-        <img src="assets/images/spaceship.png" class="spaceship-mobile" alt="spaceship">
+      <h2> front-end developer <br> & content creator <br></h2>
+      <img src="assets/images/spaceship.png" class="spaceship-mobile" alt="spaceship">
 
     </div>
     <img src="assets/images/spaceship.png" class="spaceship" alt="spaceship">
@@ -86,7 +76,7 @@
       </p>
     </div>
   </div>
-  <div class="skills-wrap">
+  <div class="skills-wrap reveal">
     <h2>How can I help you? <span><img id="helpimg" src="assets/icons/list.png" alt="List icon"></span></h2>
     <div class="skill-card-wrap">
       <div class="skill-card">
@@ -109,139 +99,139 @@
     </div>
   </div>
 
-<div id="projects-wrapper">
-  <div id="myCarousel" class="carousel carousel-fade reveal" data-bs-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
-      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-      <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
-    </ol>
+  <div id="projects-wrapper">
+    <div id="myCarousel" class="carousel carousel-fade reveal" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+      </ol>
 
-    <div class="carousel-inner">
-      <h2 id="projects">Check out some of my recent projects <span><img id="calendar" src="assets/icons/calendar.png"
-            alt=""></span></h2>
-      <div class="carousel-item active" data-bs-interval="8000">
-        <div class="container-carousel">
-          <div class="carousel-text">
-            <h2>Portfolio for an artist</h2>
-            <p><strong>Role</strong> - Developer</p>
-            <p><strong>Technologies</strong> - Headless CMS, <br> HTML, CSS, JavaScript</p>
-            <p><strong>Duration</strong> - 1 month</p>
-            <a href="artists-portfolio.html"><button class="projects-btn">See more</button></a>
-          </div>
-          <div class="carousel-img">
-            <img id="portfolio-mockup" src="assets/images/portfolio-mockup.png" style="scale: .8"
-              alt="Portfolio for an artist mockup laptop">
+      <div class="carousel-inner">
+        <h2 id="projects">Check out some of my recent projects <span><img id="calendar" src="assets/icons/calendar.png"
+              alt=""></span></h2>
+        <div class="carousel-item active" data-bs-interval="8000">
+          <div class="container-carousel">
+            <div class="carousel-text">
+              <h2>Portfolio for an artist</h2>
+              <p><strong>Role</strong> - Developer</p>
+              <p><strong>Technologies</strong> - Headless CMS, <br> HTML, CSS, JavaScript</p>
+              <p><strong>Duration</strong> - 1 month</p>
+              <a href="artists-portfolio.html"><button class="projects-btn">See more</button></a>
+            </div>
+            <div class="carousel-img">
+              <img id="portfolio-mockup" src="assets/images/portfolio-mockup.png" style="scale: .8"
+                alt="Portfolio for an artist mockup laptop">
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="carousel-item" data-bs-interval="8000">
-        <div class="container-carousel">
-          <div class="carousel-text">
-            <h2>Instagram caption <br> generator Web API</h2>
-            <p><strong>Role</strong> - Developer</p>
-            <p><strong>Technologies</strong> - JavaScript, HTML, <br> CSS, Node.js, MSSQL</p>
-            <p><strong>Duration</strong> - 1 month</p>
-            <a href="instagram-caption-generator-web-api.html"><button class="projects-btn">See more</button>
-            </a>
-          </div>
-          <div class="carousel-img-webapi">
-            <img src="assets/images/webapi-mockup.png" style="scale: .8; margin-bottom: 10rem;"
-              alt="Instagram caption generator web api mockup">
+        <div class="carousel-item" data-bs-interval="8000">
+          <div class="container-carousel">
+            <div class="carousel-text">
+              <h2>Instagram caption <br> generator Web API</h2>
+              <p><strong>Role</strong> - Developer</p>
+              <p><strong>Technologies</strong> - JavaScript, HTML, <br> CSS, Node.js, MSSQL</p>
+              <p><strong>Duration</strong> - 1 month</p>
+              <a href="instagram-caption-generator-web-api.html"><button class="projects-btn">See more</button>
+              </a>
+            </div>
+            <div class="carousel-img-webapi">
+              <img src="assets/images/webapi-mockup.png" style="scale: .8; margin-bottom: 10rem;"
+                alt="Instagram caption generator web api mockup">
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="carousel-item" data-bs-interval="8000">
-        <div class="container-carousel">
-          <div class="carousel-text">
-            <h2>My fishing blog <br> on Instagram</h2>
-            <p><strong>Role</strong> - Content creator</p>
-            <p><strong>Achievements</strong> - 800 + organic followers, <br> 12% engagement rate</p>
-            <p><strong>Duration</strong> - 2 years</p>
-            <a href="barbless-balage.html"><button class="projects-btn">See more</button></a>
-          </div>
-          <div class="carousel-img">
-            <img id="barbless-mockup" src="assets/images/barbless-mockup.png"
-              alt="Barbless Balage on instagram mockup iphone">
+        <div class="carousel-item" data-bs-interval="8000">
+          <div class="container-carousel">
+            <div class="carousel-text">
+              <h2>My fishing blog <br> on Instagram</h2>
+              <p><strong>Role</strong> - Content creator</p>
+              <p><strong>Achievements</strong> - 800 + organic followers, <br> 12% engagement rate</p>
+              <p><strong>Duration</strong> - 2 years</p>
+              <a href="barbless-balage.html"><button class="projects-btn">See more</button></a>
+            </div>
+            <div class="carousel-img">
+              <img id="barbless-mockup" src="assets/images/barbless-mockup.png"
+                alt="Barbless Balage on instagram mockup iphone">
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="carousel-item" data-bs-interval="8000">
-        <div class="container-carousel">
-          <div class="carousel-text">
-            <h2>Astronomy picture <br> of the day</h2>
-            <p><strong>Miniproject</strong> <br> because it fits the vibe of my portfolio</p>
-            <p><strong>Technologies</strong> - NASA's API, HTML, CSS, JavaScript <br></p>
-            <a href="apod.html"><button class="projects-btn">See more</button></a>
-          </div>
-          <div class="carousel-img">
-            <img id="apod" src="assets/images/apod.jpg" alt="astronomy picture of the day">
+        <div class="carousel-item" data-bs-interval="8000">
+          <div class="container-carousel">
+            <div class="carousel-text">
+              <h2>Astronomy picture <br> of the day</h2>
+              <p><strong>Miniproject</strong> <br> because it fits the vibe of my portfolio</p>
+              <p><strong>Technologies</strong> - NASA's API, HTML, CSS, JavaScript <br></p>
+              <a href="apod.html"><button class="projects-btn">See more</button></a>
+            </div>
+            <div class="carousel-img">
+              <img id="apod" src="assets/images/apod.jpg" alt="astronomy picture of the day">
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
+      <a href="#myCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
+        <span class="sr-only"></span>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a href="#myCarousel" class="carousel-control-next" role="button" data-bs-slide="next">
+        <span class="sr-only"></span>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
     </div>
-    <a href="#myCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
-      <span class="sr-only"></span>
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </a>
-    <a href="#myCarousel" class="carousel-control-next" role="button" data-bs-slide="next">
-      <span class="sr-only"></span>
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </a>
+
+
+    <!-- Projects section for mobile  -->
+    <div id="projects" class="projects-wrap">
+      <h2>Recent projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h2>Portfolio for an artist</h2>
+          <p><strong>Role</strong> - Developer</p>
+          <p><strong>Technologies</strong> - Headless CMS, <br> HTML, CSS, JavaScript</p>
+          <p><strong>Date</strong> - 2022</p>
+          <a href="artists-portfolio.html"><button class="projects-btn">See more</button></a>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <h2>Instagram caption generator Web API</h2>
+          <p><strong>Role</strong> - Developer</p>
+          <p><strong>Technologies</strong> - JavaScript, HTML, CSS, Node.js, MSSQL</p>
+          <p><strong>Date</strong> - 2022</p>
+          <a href="instagram-caption-generator-web-api.html"><button class="projects-btn">See more</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <h2>My fishing blog on Instagram</h2>
+          <p><strong>Role</strong> - Content creator</p>
+          <p><strong>Achievements</strong> - 800 + organic followers, <br> 12% engagement rate</p>
+          <p><strong>Date</strong> - 2020 - Present</p>
+          <a href="barbless-balage.html"><button class="projects-btn">See more</button></a>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <h2>Astronomy picture <br> of the day</h2>
+          <p><strong>Miniproject</strong> - because it fits the vibe of my portfolio</p>
+          <p><strong>Technologies</strong> - NASA's API, HTML, CSS, JavaScript <br></p>
+          <a href="apod.html"><button class="projects-btn">See more</button></a>
+        </div>
+      </div>
+    </div>
+
   </div>
-
-
-  <!-- Projects section for mobile  -->
-  <div id="projects" class="projects-wrap">
-    <h2>Recent projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h2>Portfolio for an artist</h2>
-        <p><strong>Role</strong> - Developer</p>
-        <p><strong>Technologies</strong> - Headless CMS, <br> HTML, CSS, JavaScript</p>
-        <p><strong>Date</strong> - 2022</p>
-        <a href="artists-portfolio.html"><button class="projects-btn">See more</button></a>
-      </div>
-    </div>
-
-    <div class="projects-grid">
-      <div class="project-card">
-        <h2>Instagram caption generator Web API</h2>
-        <p><strong>Role</strong> - Developer</p>
-        <p><strong>Technologies</strong> - JavaScript, HTML, CSS, Node.js, MSSQL</p>
-        <p><strong>Date</strong> - 2022</p>
-        <a href="instagram-caption-generator-web-api.html"><button class="projects-btn">See more</button>
-        </a>
-      </div>    
-    </div>
-
-    <div class="projects-grid">
-      <div class="project-card">
-        <h2>My fishing blog on Instagram</h2>
-        <p><strong>Role</strong> - Content creator</p>
-        <p><strong>Achievements</strong> - 800 + organic followers, <br> 12% engagement rate</p>
-        <p><strong>Date</strong> - 2020 - Present</p>
-        <a href="barbless-balage.html"><button class="projects-btn">See more</button></a>
-      </div>
-    </div>
-
-    <div class="projects-grid">
-      <div class="project-card">
-        <h2>Astronomy picture <br> of the day</h2>
-        <p><strong>Miniproject</strong> - because it fits the vibe of my portfolio</p>
-        <p><strong>Technologies</strong> - NASA's API, HTML, CSS, JavaScript <br></p>
-        <a href="apod.html"><button class="projects-btn">See more</button></a>
-      </div>    
-    </div>
   </div>
-
-  </div>
-</div>
 
   <div id="contact" class="contact-wrap">
     <h2>Send me a message</h2>
@@ -282,6 +272,7 @@
           alt="icon up"></button>
     </div>
   </footer>
+
 </body>
 
 </html>

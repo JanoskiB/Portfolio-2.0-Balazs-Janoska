@@ -1,7 +1,13 @@
+const navToggle = document.querySelector('.nav__toggle');
+
+    navToggle.addEventListener('click', () => {
+      document.body.classList.toggle('nav-open');
+    });
+
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-}
+};
 
 
 function reveal() {
@@ -16,7 +22,7 @@ function reveal() {
       reveals[i].classList.remove("active");
     }
   }
-}
+};
 
 window.addEventListener("scroll", reveal);
 
