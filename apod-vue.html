@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomy picture of the day</title>
+    <script defer src="assets/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <span><a class="logo" style="margin-top: 1rem;" href="index.html">JB</a></span>
+        <nav class="nav-d">
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects-wrapper">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="Balazs-Janoska-CV.pdf" target="_blank">CV</a></li>
+            </ul>
+        </nav>
+        <nav class="nav-s">
+            <button class="nav__toggle">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="index.html#projects-wrapper" class="nav__link">Projects</a></li>
+                <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+                <li class="nav__item"><a href="Balazs-Janoska-CV.pdf" target="_blank" class="nav__link">CV</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="vapp">
+            <h3 style="margin-top:5rem ;">Astronomy picture of the day</h3>
+            <h1 style="margin:0 ;">{{data.title}}</h1>
+            <h2>{{data.date}}</h2>
+            <img :src="data.url" alt="Astronomy Picture of The Day">
+            <h2>{{data.copyright}}</h2>
+            <p>{{data.explanation}}</p> <br>
+            <a :href="data.hdurl" target="_blank"><button>Open HD image in new window</button></a>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-wrap">
+            <div class="icons-wrap">
+                <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img
+                        src="assets/icons/icon-linkedin.svg" alt=""></a>
+                <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg"
+                        alt="mail icon"></a>
+                <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg"
+                        alt="github icon"></a>
+            </div>
+            <span>© BALAZS JANOSKA 2022</span>
+            <button onclick="topFunction()">To the top</button>
+        </div>
+    </footer>
+
+    <script>
+        const vueApp = new Vue({
+            el: '#vapp',
+
+            data() {
+                return {
+                    GetNasaData: 'https://api.nasa.gov/planetary/apod?api_key=imQvbpDRVnFzNAwvbr0V8qSMVH10p8S0dNtLsUYQ',
+                    data: {},
+                    dataExpl: false,
+                };
+            },
+
+            created() {
+                fetch(this.GetNasaData)
+                    .then((response) => response.json())
+                    .then((data) => {
+                        this.data = data;
+                        console.log(data);
+                    })
+
+            },
+
+            methods: {
+                showExpl() {
+                    this.dataExpl = true;
+                },
+            }
+        }
+        )
+    </script>
+
+    <style>
+        header {
+            height: 10vh;
+        }
+
+        #vapp {
+            margin-left: 10vw;
+        }
+
+        img {
+            width: 80%;
+        }
+
+        p {
+            width: 80%;
+        }
+
+        button {
+            width: fit-content;
+            height: fit-content;
+            padding: 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            background-color: var(--spacepurp);
+            color: white;
+            border: 0;
+            border-radius: 30px;
+        }
+
+        button:hover {
+            background-color: #9F36A8;
+        }
+
+        footer {
+            margin-top: 5rem;
+        }
+
+    </style>
+
+
+</body>
+
+</html>
