@@ -273,7 +273,7 @@ h2 {
 }
 
 .typing {
-    width: 40ch;
+    width: 60ch;
     animation: typing 2s steps(22), step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
@@ -417,7 +417,6 @@ h2 {
     text-transform: uppercase;
 }
 
-
 .skills-wrap {
     margin-bottom: 5rem;
 }
@@ -434,7 +433,6 @@ h2 {
     scale: .5;
 }
 
-
 .skill-card-wrap {
     width: 80%;
     margin: 0 auto;
@@ -442,8 +440,6 @@ h2 {
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
 }
-
-
 
 .skill-card {
     height: 100%;
@@ -477,6 +473,8 @@ h2 {
     margin-left: 2rem;
     padding-right: 1rem;
 }
+
+/* Projects */
 
 #calendar {
     scale: .5;
@@ -543,7 +541,38 @@ h2 {
     left: 200px;
 }
 
-.projects-btn {
+/* Apod with vue */
+
+#vapp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80vw;
+    height: fit-content;
+}
+
+.apod-left>h2 {
+    font-size: 1.3vw;
+}
+
+.apod-left>h3 {
+    font-size: 2vw;
+    color: #B3E9C7;
+}
+
+.apod-left>p {
+    font-size: 1vw;
+    text-align: justify;
+    padding-right: 3vw;
+}
+
+#apod-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+.projects-btn, .apod-btn {
     margin-top: 2rem;
     margin-bottom: 1rem;
     padding: 15px;
@@ -554,14 +583,13 @@ h2 {
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
     background-color: var(--green);
-    color: white;
+    color: var(--spacepurp);
     text-transform: uppercase;
-
 }
 
-.projects-btn:hover {
+.projects-btn:hover, .apod-btn:hover {
     background-color: #9F36A8;
-
+    color: white;
 }
 
 /* Projects for mobile */
@@ -569,7 +597,7 @@ h2 {
     display: none;
 }
 
-.projects-wrap>h2{
+.projects-wrap>h2 {
     margin-bottom: 0;
 }
 
@@ -578,8 +606,7 @@ h2 {
 }
 
 #barbless-mockup {
-    left: 520px;
-    top: -190px;
+    width: 150%;
 }
 
 #portfolio-mockup {
@@ -1021,6 +1048,10 @@ form>input::placeholder {
         grid-template-columns: 1fr;
     }
 
+    h1{
+        font-size: 2rem;
+    }
+
 
     h2, .cases-h2 {
         font-size: .8rem;
@@ -1159,7 +1190,7 @@ form>input::placeholder {
     .project-card>h2 {
         font-weight: 600;
         font-size: 1.5rem;
-        color:var(--green);
+        color: var(--green);
         margin-top: 2rem;
         margin-bottom: 2rem;
         margin-left: 2rem;

@@ -12,6 +12,7 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/styles.css">
   <script defer src="assets/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
   </style>
@@ -158,7 +159,7 @@
               <a href="barbless-balage.html"><button class="projects-btn">See more</button></a>
             </div>
             <div class="carousel-img">
-              <img id="barbless-mockup" src="assets/images/barbless-mockup.png"
+              <img id="barbless-mockup" src="assets/images/barbless-mockups.png"
                 alt="Barbless Balage on instagram mockup iphone">
             </div>
           </div>
@@ -167,28 +168,35 @@
         <div class="carousel-item" data-bs-interval="8000">
           <div class="container-carousel">
             <div class="carousel-text">
-              <h2>Astronomy picture <br> of the day</h2>
-              <p><strong>Miniproject</strong> <br> because it fits the vibe of my portfolio</p>
-              <p><strong>Technologies</strong> - Vue.js, NASA's API<br></p>
-              <a href="apod-vue.html"><button class="projects-btn">See more</button></a>
-            </div>
-            <div class="carousel-img">
-              <img id="apod" src="assets/images/apod.jpg" alt="astronomy picture of the day">
+              <div id="vapp">
+                <div class="apod-left">
+                  <h2>Astronomy picture of the day:</h2>
+                  <h3>{{data.title}}</h3>
+                  <h4>{{data.date}}</h4>
+                  <p>{{data.explanation}}</p> <br>
+                  <h5>{{data.copyright}}</h5>
+                  <a :href="data.hdurl" target="_blank"><button class="apod-btn">HD in new window</button></a>
+                </div>
+
+                <a :href="data.hdurl" target="_blank"><img id="apod-img" :src="data.url"
+                    alt="Astronomy Picture of The Day">
+                </a>
+
+              </div>
             </div>
           </div>
+
         </div>
-
+        <a href="#myCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
+          <span class="sr-only"></span>
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a href="#myCarousel" class="carousel-control-next" role="button" data-bs-slide="next">
+          <span class="sr-only"></span>
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
       </div>
-      <a href="#myCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
-        <span class="sr-only"></span>
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      </a>
-      <a href="#myCarousel" class="carousel-control-next" role="button" data-bs-slide="next">
-        <span class="sr-only"></span>
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </a>
     </div>
-
 
     <!-- Projects section for mobile  -->
     <div id="projects" class="projects-wrap">
@@ -224,17 +232,6 @@
         </div>
       </div>
 
-      <div class="projects-grid">
-        <div class="project-card">
-          <h2>Astronomy picture <br> of the day</h2>
-          <p><strong>Miniproject</strong> <br> because it fits the vibe of my portfolio</p>
-          <p><strong>Technologies</strong> - Vue.js, NASA's API <br></p>
-          <a href="apod-vue.html"><button class="projects-btn">See more</button></a>
-        </div>
-      </div>
-    </div>
-
-  </div>
   </div>
 
   <div id="contact" class="contact-wrap">
@@ -278,6 +275,37 @@
           alt="icon up"></button>
     </div>
   </footer>
+
+  <script>
+    const vueApp = new Vue({
+      el: '#vapp',
+
+      data() {
+        return {
+          GetNasaData: 'https://api.nasa.gov/planetary/apod?api_key=imQvbpDRVnFzNAwvbr0V8qSMVH10p8S0dNtLsUYQ',
+          data: {},
+          dataExpl: false,
+        };
+      },
+
+      created() {
+        fetch(this.GetNasaData)
+          .then((response) => response.json())
+          .then((data) => {
+            this.data = data;
+            console.log(data);
+          })
+
+      },
+
+      methods: {
+        showExpl() {
+          this.dataExpl = true;
+        },
+      }
+    }
+    )
+  </script>
 
 </body>
 

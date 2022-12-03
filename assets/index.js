@@ -1,14 +1,19 @@
+// Burger menu
+
 const navToggle = document.querySelector('.nav__toggle');
 
     navToggle.addEventListener('click', () => {
       document.body.classList.toggle('nav-open');
     });
 
+// To the top button
+
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 };
 
+// Reveal animaton
 
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
