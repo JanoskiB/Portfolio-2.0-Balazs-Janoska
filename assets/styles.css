@@ -273,12 +273,12 @@ h2 {
 }
 
 .typing {
-    width: 60ch;
-    animation: typing 2s steps(22), step-end infinite alternate;
+    width: 100%;
+    animation: typing 3.5s steps(36), step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     font-size: 2vw;
-    -webkit-animation: typing 2s steps(22), step-end infinite alternate;
+    -webkit-animation: typing 3.5s steps(36), step-end infinite alternate;
 }
 
 @keyframes typing {
