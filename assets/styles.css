@@ -142,7 +142,7 @@ button, a {
     padding: 0;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 98vh;
     padding: 3em 6em;
 }
 
@@ -241,7 +241,7 @@ button, a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .hero-title {
@@ -400,6 +400,10 @@ h2 {
 
 }
 
+.about-text>p {
+    margin-left: 0;
+}
+
 .link {
     text-transform: none;
     color: #513C8B;
@@ -427,6 +431,7 @@ h2 {
     font-size: 4vw;
     text-transform: uppercase;
     margin-left: 10vw;
+    margin-top: 3rem;
 }
 
 #helpimg {
@@ -488,7 +493,7 @@ h2 {
     width: 10%;
 }
 
-.carousel-inner>h2 {
+.projects-h2 {
     font-weight: 600;
     font-size: 3vw;
     margin-left: 10%;
@@ -499,7 +504,7 @@ h2 {
 .carousel-item {
     margin-top: -5vh;
     margin-bottom: 5vh;
-    height: 90vh;
+    height: 95vh;
     position: relative;
     background-position: bottom;
     background-size: cover;
@@ -512,6 +517,10 @@ h2 {
     font-weight: 600;
     margin-bottom: 2rem;
 
+}
+
+.carousel-text>p {
+    margin-left: 0;
 }
 
 .carousel-img {
@@ -534,10 +543,15 @@ h2 {
     right: 200px;
 }
 
+#barbless-mockup {
+    width: 150%;
+}
+
 .container-carousel {
     position: absolute;
-    width: 70vw;
-    top: 170px;
+    width: 80vw;
+    height: 100%;
+    top: 5rem;
     left: 200px;
 }
 
@@ -560,12 +574,14 @@ h2 {
 }
 
 .apod-left>p {
+    margin-left: 0;
     font-size: 1vw;
     text-align: justify;
     padding-right: 3vw;
 }
 
 #apod-img {
+    margin-top: 6.5rem;
     width: 100%;
     border-radius: 10px;
 }
@@ -592,37 +608,41 @@ h2 {
     color: white;
 }
 
-/* Projects for mobile */
-.projects-wrap {
+/* Swiper for mobile */
+
+.swiper {
     display: none;
+    height: fit-content;
 }
 
-.projects-wrap>h2 {
-    margin-bottom: 0;
-}
-
-.demo-btn {
-    margin-left: 2rem;
-}
-
-#barbless-mockup {
-    width: 150%;
-}
-
-#portfolio-mockup {
-    bottom: 320px;
-}
-
-#apod {
-    border-radius: 10px;
+.swiper-content {
+    background-color: #513C8B;
+    border-radius: 20px;
+    width: 80%;
+    margin: 0 auto;
     -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    width: 40vw;
-    margin-left: 6rem;
-    margin-top: 3rem;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
+
+/* .swiper-wrap>p,h2{
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+} */
+
+.swiper-content>h2 {
+    margin-left: 2rem;
+    padding-top: 2rem;
+    color: #B3E9C7;
+    font-size: 1.5rem;
+}
+
+.swiper-content>p {
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+}
+
 
 /* Contact section */
 
@@ -638,6 +658,10 @@ h2 {
 .contact-left {
     margin-top: 2rem;
     margin-left: 10vw;
+}
+
+.contact-left>p {
+    margin-left: 0;
 }
 
 .contact-right>img {
@@ -922,7 +946,7 @@ form>input::placeholder {
 }
 
 .hero-mockup-barbless {
-    width: 30vw;
+    width: 80%;
 }
 
 .hero-mockup-igcaption {
@@ -1048,7 +1072,7 @@ form>input::placeholder {
         grid-template-columns: 1fr;
     }
 
-    h1{
+    h1 {
         font-size: 2rem;
     }
 
@@ -1065,7 +1089,7 @@ form>input::placeholder {
     .spaceship-mobile {
         display: block;
         position: relative;
-        bottom: 25%;
+        bottom: 20%;
         right: 38%;
         scale: .7;
     }
@@ -1081,29 +1105,12 @@ form>input::placeholder {
         font-size: 1rem;
     }
 
-    .ufo-balazs {
-        display: none;
-    }
-
-    #helpimg {
-        display: none;
-    }
-
-    #calendar {
-        display: none;
-
-    }
-
     .about-text>h2 {
         font-size: 1.5rem;
     }
 
-
-    .skills-wrap>h2 {
-        font-size: 1.8rem;
-        margin-left: 10%;
-        margin-top: 10%;
-        margin-left: 10%;
+    #helpimg, #calendar {
+        display: none;
     }
 
     .skill-card-wrap {
@@ -1121,6 +1128,10 @@ form>input::placeholder {
 
     .skill-card>ul>li {
         font-size: 1rem;
+    }
+
+    .swiper {
+        display: block;
     }
 
     .carousel-img {
@@ -1152,7 +1163,7 @@ form>input::placeholder {
         display: block;
     }
 
-    .projects-wrap>h2 {
+    .projects-h2 {
         color: var(--green);
         text-transform: uppercase;
         font-weight: 600;
