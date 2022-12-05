@@ -67,6 +67,8 @@ button, a {
     opacity: 1;
 }
 
+
+
 .logo {
     font-family: 'Nunito', sans-serif;
     margin-left: 10vw;
@@ -937,7 +939,7 @@ form>input::placeholder {
 }
 
 .cases-h1 {
-    font-size: 3.5rem;
+    font-size: 4vw;
 }
 
 .hero-mockup {
@@ -983,8 +985,9 @@ form>input::placeholder {
 }
 
 .green-section {
+    min-width: 100vw;
     margin-top: 5rem;
-    height: fit-content;
+    min-height: 60vh;
     margin-bottom: 2rem;
     background-color: #b3e9c7b5;
 }
@@ -1001,11 +1004,42 @@ form>input::placeholder {
 .green-section>p {
     font-weight: 500;
     margin-left: 10%;
+    margin-right: 10%;
     color: white;
     font-size: 1.8rem;
-    margin-right: 10%;
     padding-bottom: 3rem;
+    text-align: justify;
 }
+
+.green-section-grid{
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+
+.green-left>p {
+    margin-right: 3vw;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.green-right>img {
+    width: 100%;
+    scale: 1;
+    margin: 0 auto;
+   
+}
+
+@media screen and (max-width: 800px) {
+    .green-section-grid{
+        grid-template-columns: 100%;
+    }
+
+}
+
 
 .case-desc {
     margin-top: 3rem;
@@ -1026,7 +1060,13 @@ form>input::placeholder {
 .case-desc>p {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.case-desc>ul>li{
+    font-size: 1.1rem;
+    text-align: justify;
 }
 
 .portfolio-mockup-iphone {
