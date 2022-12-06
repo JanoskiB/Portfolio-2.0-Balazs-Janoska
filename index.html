@@ -121,32 +121,20 @@
         <div class="carousel-item active" data-bs-interval="8000">
           <div class="container-carousel">
             <div class="carousel-text">
-              <h2>Portfolio for an artist</h2>
-              <p><strong>Role</strong> - Developer</p>
-              <p><strong>Technologies</strong> - Headless CMS, <br> HTML, CSS, JavaScript</p>
-              <p><strong>Duration</strong> - 1 month</p>
-              <a href="artists-portfolio.html"><button class="projects-btn">See more</button></a>
-            </div>
-            <div class="carousel-img">
-              <img id="portfolio-mockup" src="assets/images/portfolio-mockup.png" style="scale: .8"
-                alt="Portfolio for an artist mockup laptop">
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item" data-bs-interval="8000">
-          <div class="container-carousel">
-            <div class="carousel-text">
-              <h2>Instagram caption <br> generator Web API</h2>
-              <p><strong>Role</strong> - Developer</p>
-              <p><strong>Technologies</strong> - JavaScript, HTML, <br> CSS, Node.js, MSSQL</p>
-              <p><strong>Duration</strong> - 1 month</p>
-              <a href="instagram-caption-generator-web-api.html"><button class="projects-btn">See more</button>
-              </a>
-            </div>
-            <div class="carousel-img-webapi">
-              <img src="assets/images/webapi-mockup.png" style="scale: .8; margin-bottom: 10rem;"
-                alt="Instagram caption generator web api mockup">
+              <div id="vapp">
+                <div class="apod-left">
+                  <h2>Astronomy picture of the day <span style="font-size:1.3vw; color: #201738;"> via Nasa API & Vue.js</span></h2>
+                  <h3>{{data.title}}</h3>
+                  <h5>{{data.date}}</h5>
+                  <p>{{data.explanation}}</p> <br>
+                  <!-- <h5>{{data.copyright}}</h5> -->
+                  <a :href="data.hdurl" target="_blank"><button class="apod-btn">HD in new window</button></a>
+                </div>
+                <a :href="data.hdurl" target="_blank"><img id="apod-img" :src="data.url"
+                    alt="Astronomy Picture of The Day"> 
+                    <!-- <iframe :src="data.url"></iframe> -->
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -170,26 +158,41 @@
         <div class="carousel-item" data-bs-interval="8000">
           <div class="container-carousel">
             <div class="carousel-text">
-              <div id="vapp">
-                <div class="apod-left">
-                  <h2>Astronomy picture of the day:</h2>
-                  <h3>{{data.title}}</h3>
-                  <h4>{{data.date}}</h4>
-                  <p>{{data.explanation}}</p> <br>
-                  <!-- <h5>{{data.copyright}}</h5> -->
-                  <a :href="data.hdurl" target="_blank"><button class="apod-btn">HD in new window</button></a>
-                </div>
-
-                <a :href="data.hdurl" target="_blank"><img id="apod-img" :src="data.url"
-                    alt="Astronomy Picture of The Day"> 
-                    <!-- <iframe :src="data.url"></iframe> -->
-                </a>
-
-              </div>
+              <h2>Portfolio for Zoja</h2>
+              <p>Technical realisation of an artist's portfolio <br> that showcases 100+ artpieces</p>
+              <p><strong>Role</strong> - Developer</p>
+              <p><strong>Technologies</strong> Headless CMS, <br> HTML, CSS, JavaScript</p>
+              <a href="artists-portfolio.html"><button class="projects-btn">See more</button></a>
+            </div>
+            <div class="carousel-img">
+              <img id="portfolio-mockup" src="assets/images/portfolio-mockup.png" style="scale: .8"
+                alt="Portfolio for an artist mockup laptop">
             </div>
           </div>
-
         </div>
+
+        <div class="carousel-item" data-bs-interval="8000">
+          <div class="container-carousel">
+            <div class="carousel-text">
+              <h2>Instagram caption <br> generator Web API</h2>
+              <p>My first time playing around with CRUD, <br> 
+                and getting introduced to back-end concepts
+              </p>
+              <p><strong>Role</strong> - Developer</p>
+              <p><strong>Technologies</strong> - JavaScript, HTML, <br> CSS, Node.js, MSSQL</p>
+              <p><strong>Duration</strong> - 1 month</p>
+              <a href="instagram-caption-generator-web-api.html"><button class="projects-btn">See more</button>
+              </a>
+            </div>
+            <div class="carousel-img">
+              <img id="webapi-mockup" src="assets/images/webapi-mockup.png" style="scale: .8; margin-bottom: 10rem;"
+                alt="Instagram caption generator web api mockup">
+            </div>
+          </div>
+        </div>
+
+  
+
         <a href="#myCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
           <span class="sr-only"></span>
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>

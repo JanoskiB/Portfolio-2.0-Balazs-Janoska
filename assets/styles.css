@@ -295,6 +295,7 @@ h2 {
     animation-delay: .8s;
     z-index: -1;
     width: 100%;
+    padding-right: 3rem;
     -webkit-animation: slide-in 1.5s ease-in-out 1.5s both;
 }
 
@@ -504,13 +505,16 @@ h2 {
 }
 
 .carousel-item {
-    margin-top: -5vh;
-    margin-bottom: 5vh;
-    height: 95vh;
-    position: relative;
-    background-position: bottom;
-    background-size: cover;
+    min-height: 90vh;
+    width: 80vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
     background-color: #513c8bd0;
+}
+
+.carousel-text {
+    padding-left: 4rem;
+
 }
 
 .carousel-text>h2 {
@@ -518,7 +522,6 @@ h2 {
     color: var(--green);
     font-weight: 600;
     margin-bottom: 2rem;
-
 }
 
 .carousel-text>p {
@@ -526,44 +529,42 @@ h2 {
 }
 
 .carousel-img {
-    width: 40%;
+    width: 50%;
     float: right;
     position: relative;
-    bottom: 390px;
-    right: 200px;
+    bottom: 300px;
 }
 
-.carousel-img>img {
-    height: fit-content;
+#portfolio-mockup{
+
 }
 
-.carousel-img-webapi {
-    width: 40%;
-    float: right;
-    position: relative;
-    bottom: 400px;
-    right: 200px;
+#webapi-mockup{
+position: relative;
+bottom: 100px;
 }
 
 #barbless-mockup {
-    width: 150%;
+    width: 100%;
+    position: relative;
+    right: 10rem;
+    bottom: 100px;
 }
 
 .container-carousel {
     position: absolute;
-    width: 80vw;
-    height: 100%;
     top: 5rem;
-    left: 200px;
+    height: fit-content;
 }
 
 /* Apod with vue */
 
 #vapp {
     display: grid;
+    padding: 0 2rem 0 2rem;
+    padding-bottom: 5rem;
     grid-template-columns: 1fr 1fr;
-    width: 80vw;
-    height: fit-content;
+    min-height: fit-content;
 }
 
 .apod-left>h2 {
@@ -583,8 +584,8 @@ h2 {
 }
 
 #apod-img {
-    margin-top: 6.5rem;
-    width: 100%;
+    margin-top: 10rem;
+    width: 90%;
     border-radius: 10px;
 }
 
@@ -1011,7 +1012,7 @@ form>input::placeholder {
     text-align: justify;
 }
 
-.green-section-grid{
+.green-section-grid {
     width: 80vw;
     margin: 0 auto;
     display: grid;
@@ -1030,11 +1031,11 @@ form>input::placeholder {
     width: 100%;
     scale: 1;
     margin: 0 auto;
-   
+
 }
 
 @media screen and (max-width: 800px) {
-    .green-section-grid{
+    .green-section-grid {
         grid-template-columns: 100%;
     }
 
@@ -1064,7 +1065,7 @@ form>input::placeholder {
     text-align: justify;
 }
 
-.case-desc>ul>li{
+.case-desc>ul>li {
     font-size: 1.1rem;
     text-align: justify;
 }
