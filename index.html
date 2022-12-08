@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/styles.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="assets/styles.css">
   <script defer src="assets/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
   </style>
@@ -47,8 +47,8 @@
       <ul class="nav__list">
         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
         <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-        <li class="nav__item"><a href="Balazs-Janoska-CV.pdf" target="_blank" class="nav__link">CV</a></li>
         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        <li class="nav__item"><a href="Balazs-Janoska-CV.pdf" target="_blank" class="nav__link">CV</a></li>
       </ul>
     </nav>
 
@@ -87,20 +87,22 @@
     <div class="skill-card-wrap">
       <div class="skill-card">
         <h2>Front-end development</h2>
+        <p>I build responsive websites that are optimized for search engines</p>
         <ul>
           <li>HTML, CSS, JavaScript</li>
-          <li>Wordpress</li>
+          <li>Wordpress, Elementor</li>
           <li>Technical SEO</li>
           <li>Vue.js, Node.js & MSSQL</li>
         </ul>
       </div>
       <div class="skill-card">
         <h2>Content creation</h2>
+        <p>I've had a passion for creating multimedia content for a long time</p>
+
         <ul>
-          <li>Photo & Video editing <br> with Adobe tools</li>
+          <li>Photo & Video editing  with Adobe tools</li>
           <li>Photography & Videography</li>
           <li>Social Media management</li>
-          <li>UX/UI design</li>
         </ul>
       </div>
     </div>
@@ -125,7 +127,8 @@
             <div class="carousel-text">
               <div id="vapp">
                 <div class="apod-left">
-                  <h2>Astronomy picture of the day <span style="font-size:1.3vw; color: #201738;"> via Nasa API & Vue.js</span></h2>
+                  <h2>Astronomy picture of the day <span style="font-size:1.3vw; color: #201738;"> via Nasa API &
+                      Vue.js</span></h2>
                   <h3>{{data.title}}</h3>
                   <h5>{{data.date}}</h5>
                   <p>{{data.explanation}}</p> <br>
@@ -133,8 +136,8 @@
                   <a :href="data.hdurl" target="_blank"><button class="apod-btn">HD in new window</button></a>
                 </div>
                 <a :href="data.hdurl" target="_blank"><img id="apod-img" :src="data.url"
-                    alt="Astronomy Picture of The Day"> 
-                    <!-- <iframe :src="data.url"></iframe> -->
+                    alt="Astronomy Picture of The Day">
+                  <!-- <iframe :src="data.url"></iframe> -->
                 </a>
               </div>
             </div>
@@ -161,7 +164,7 @@
           <div class="container-carousel">
             <div class="carousel-text">
               <h2>Instagram caption <br> generator Web API</h2>
-              <p>My first time playing around with CRUD, <br> 
+              <p>My first time playing around with CRUD, <br>
                 and getting introduced to back-end concepts
               </p>
               <p><strong>Role</strong> - Developer</p>
@@ -180,23 +183,25 @@
           <div class="container-carousel">
             <div class="carousel-text">
               <h2> Barbless Gear <br> Webshop</h2>
-              <p><strong>Role</strong> - UI Design, Visual identity</p>
-              <p>High fidelity mockup of a webshop <br> that sells hand made fishing lures <br> &
-                 and high quality clothing for anglers. 
+              <p>High fidelity prototype of a webshop <br> that sells hand-made fishing lures <br> &
+                high quality clothing for anglers
               </p>
+              <p><strong>Role</strong> - UI Design, Visual identity</p>
               <a href="barbless-gear.html"><button class="projects-btn">See more</button></a>
             </div>
             <div class="carousel-img">
-              <img id="barbless-mockup" src="assets/images/barbless-gear-mockup.png"
+              <img id="webshop-mockup" src="assets/images/barbless-gear-mockup.png"
                 alt="Barbless Balage on instagram mockup iphone">
             </div>
           </div>
-        </div>  
+        </div>
 
         <div class="carousel-item" data-bs-interval="16000">
           <div class="container-carousel">
             <div class="carousel-text">
               <h2>My fishing blog <br> on Instagram</h2>
+              <p>I document my adventures in order to share <br> my experiences of sustaniable sportfishing <br> with
+                Instagram’s huge angling community</p>
               <p><strong>Role</strong> - Content creator</p>
               <p><strong>Achievements</strong> <br> 800 + organic followers, <br> 12% engagement rate</p>
               <a href="barbless-balage.html"><button class="projects-btn">See more</button></a>
@@ -206,7 +211,7 @@
                 alt="Barbless Balage on instagram mockup iphone">
             </div>
           </div>
-        </div>  
+        </div>
 
         <a href="#myCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
           <span class="sr-only"></span>
@@ -223,12 +228,22 @@
   <!-- Swiper for mobile -->
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="swiper-content">
+          <h2>Astronomy picture of the day</h2>
+          <p><strong>Miniproject with Vue.js and NASA's API</strong></p>
+          <p>Because it fits the vibe of my portfolio</p>
+          <a href="apod-vue.html"><button class="projects-btn">See APOD</button></a>
+        </div>
+      </div>
+
       <div class="swiper-slide">
         <div class="swiper-content">
           <h2>Portfolio for an artist</h2>
+          <p>Technical realisation of an artist's portfolio that showcases 100+ artpieces</p>
           <p><strong>Role</strong> - Developer</p>
           <p><strong>Technologies</strong> - Headless CMS, <br> HTML, CSS, JavaScript</p>
-          <p><strong>Date</strong> - 2022</p>
           <a href="artists-portfolio.html"><button class="projects-btn">See more</button></a>
         </div>
       </div>
@@ -236,30 +251,38 @@
       <div class="swiper-slide">
         <div class="swiper-content">
           <h2>Instagram caption generator Web API</h2>
+          <p>My first time playing around with CRUD, <br>
+            and getting introduced to back-end concepts
+          </p>
           <p><strong>Role</strong> - Developer</p>
           <p><strong>Technologies</strong> - JavaScript, HTML, CSS, Node.js, MSSQL</p>
-          <p><strong>Date</strong> - 2022</p>
           <a href="instagram-caption-generator-web-api.html"><button class="projects-btn">See more</button>
           </a>
         </div>
       </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-content">
+          <h2> Barbless Gear Webshop</h2>
+          <p>High fidelity prototype of a webshop that sells hand-made fishing lures &
+            high quality clothing for anglers
+          </p>
+          <p><strong>Role</strong> - UI Design, Visual identity</p>
+          <a href="barbless-gear.html"><button class="projects-btn">See more</button></a>
+        </div>
+      </div>
+
       <div class="swiper-slide">
         <div class="swiper-content">
           <h2>My fishing blog on Instagram</h2>
+          <p>I document my adventures in order to share my experiences of sustaniable sportfishing with
+            Instagram’s huge angling community</p>
           <p><strong>Role</strong> - Content creator</p>
           <p><strong>Achievements</strong> <br> 800 + organic followers, <br> 12% engagement rate</p>
-          <p><strong>Date</strong> - 2020 - Present</p>
           <a href="barbless-balage.html"><button class="projects-btn">See more</button></a>
         </div>
       </div>
-      <div class="swiper-slide">
-        <div class="swiper-content">
-            <h2>Astronomy picture of the day</h2>
-            <p><strong>Miniproject</strong></p>
-            <p>Because it fits the vibe of my portfolio</p>
-            <a href="apod-vue.html"><button class="projects-btn">See APOD</button></a>
-        </div>
-      </div>
+
     </div>
     <div class="swiper-pagination"></div>
   </div>
@@ -293,8 +316,8 @@
   <footer>
     <div class="footer-wrap">
       <div class="icons-wrap">
-        <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img src="assets/icons/icon-linkedin.svg"
-            alt=""></a>
+        <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img id="linkedIn"
+            src="assets/icons/icon-linkedin.svg" alt=""></a>
         <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg"
             alt="mail icon"></a>
         <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg"

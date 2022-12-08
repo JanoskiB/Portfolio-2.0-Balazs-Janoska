@@ -39,11 +39,11 @@
     </header>
     <main>
         <div id="vapp">
-            <h3 style="margin-top:5rem ;">Astronomy picture of the day</h3>
-            <h1 style="margin:0 ;">{{data.title}}</h1>
-            <h2>{{data.date}}</h2>
-            <img :src="data.url" alt="Astronomy Picture of The Day">
-            <h2>{{data.copyright}}</h2>
+            <h3>Astronomy picture of the day</h3> <br>
+            <h1 >{{data.title}}</h1> <br>
+            <h2>{{data.date}}</h2> <br>
+            <img :src="data.url" alt="Astronomy Picture of The Day"> <br>
+            <h2>{{data.copyright}}</h2> <br>
             <p>{{data.explanation}}</p> <br>
             <a :href="data.hdurl" target="_blank"><button>Open HD image in new window</button></a>
 
@@ -102,7 +102,20 @@
         }
 
         #vapp {
+            margin-top: 5rem;
             margin-left: 10vw;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        p, h1, h2, h3{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        h1{
+            width: 100%;
+            font-size: 2.5vw;
         }
 
         img {

@@ -33,7 +33,7 @@
 }
 
 body {
-    background: url(images/background.svg);
+    background: url(images/background-stars.png);
     background-color: rgba(33, 24, 92, 1);
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -256,10 +256,12 @@ button, a {
 h1 {
     font-weight: 600;
     font-size: 5vw;
-    color: #b3e9c724;
+    color: #b3e9c700;
     text-transform: uppercase;
     transform: scale(0.94);
-    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    animation: scale 2s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    animation-delay: 1s;
+    -webkit-animation: scale 2s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 
 @keyframes scale {
@@ -276,11 +278,12 @@ h2 {
 
 .typing {
     width: 100%;
-    animation: typing 3.5s steps(36), step-end infinite alternate;
+    animation: typing 4s steps(36), step-end infinite alternate;
+    animation-delay: 1s;
     white-space: nowrap;
     overflow: hidden;
     font-size: 2vw;
-    -webkit-animation: typing 3.5s steps(36), step-end infinite alternate;
+    -webkit-animation: typing 4s steps(36), step-end infinite alternate;
 }
 
 @keyframes typing {
@@ -372,6 +375,7 @@ h2 {
 
 .about-wrap>img {
     width: 60%;
+    padding-top: 1rem;
     margin: 0 auto;
     align-self: center;
 }
@@ -470,12 +474,20 @@ h2 {
     margin-top: 2rem;
 }
 
+.skill-card>p{
+    margin-left: 3rem;
+    margin-right: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #513C8B;
+}
+
 .skill-card>ul {
     margin-top: 2rem;
 }
 
 .skill-card>ul>li {
-    font-size: 1.5vw;
+    font-size: 1rem;
     color: white;
     margin-top: 1rem;
     margin-left: 2rem;
@@ -536,24 +548,38 @@ h2 {
 }
 
 #portfolio-mockup{
+    position: relative;
+    padding-top: 3rem;
+    padding-right: 8rem;
+    width: 120%;
+}
+
+#webapi-mockup {
+    position: relative;
+    padding-right: 8rem;
+
+    width: 120%;
 
 }
 
-#webapi-mockup{
-position: relative;
-bottom: 100px;
+#webshop-mockup {
+    
+    position: relative;
+    padding-top: 3rem;
+    padding-right: 8rem;
+    width: 120%;
 }
 
 #barbless-mockup {
     width: 100%;
-    position: relative;
-    right: 10rem;
+    padding-right: 5rem;
+    
 }
 
 .container-carousel {
     position: absolute;
     top: 5rem;
-    height: fit-content;
+    width: 100%;
 }
 
 /* Apod with vue */
@@ -586,6 +612,7 @@ bottom: 100px;
     margin-top: 5rem;
     width: 90%;
     border-radius: 10px;
+    min-height: 100%;
 }
 
 
@@ -637,12 +664,13 @@ bottom: 100px;
     margin-left: 2rem;
     padding-top: 2rem;
     color: #B3E9C7;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .swiper-content>p {
     margin-left: 2rem;
     margin-bottom: 0.5rem;
+    font-size: .9rem;
 }
 
 
@@ -890,6 +918,10 @@ form>input::placeholder {
     scale: .5;
 }
 
+#linkedIn{
+    margin-left: 20px;
+}
+
 .footer-wrap>span {
     color: white;
     font-size: 1.5vw;
@@ -904,7 +936,7 @@ form>input::placeholder {
     margin-left: 2rem;
     text-transform: uppercase;
     background-color: var(--green);
-    color: white;
+    color: var(--spacepurp);
     border: 0;
     border-radius: 30px;
     -webkit-border-radius: 30px;
@@ -1317,8 +1349,7 @@ form>input::placeholder {
         margin: 0 auto;
     }
 
-    .icons-wrap>a {
-    }
+    .icons-wrap>a {}
 
     .footer-wrap>button {
         margin: 0 auto;
