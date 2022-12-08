@@ -100,7 +100,7 @@
         <p>I've had a passion for creating multimedia content for a long time</p>
 
         <ul>
-          <li>Photo & Video editing  with Adobe tools</li>
+          <li>Photo & Video editing with Adobe tools</li>
           <li>Photography & Videography</li>
           <li>Social Media management</li>
         </ul>
@@ -135,10 +135,7 @@
                   <!-- <h5>{{data.copyright}}</h5> -->
                   <a :href="data.hdurl" target="_blank"><button class="apod-btn">HD in new window</button></a>
                 </div>
-                <a :href="data.hdurl" target="_blank"><img id="apod-img" :src="data.url"
-                    alt="Astronomy Picture of The Day">
-                  <!-- <iframe :src="data.url"></iframe> -->
-                </a>
+                <div class="apod-media" id="media-container"></div>
               </div>
             </div>
           </div>
@@ -347,6 +344,21 @@
           .then((data) => {
             this.data = data;
             console.log(data);
+            const mediaContainer = document.getElementById('media-container');
+            if (data.media_type === 'image') {
+              // If the media type is "image", generate an <img> tag
+              const img = document.createElement('img');
+              img.src = data.url;
+              mediaContainer.appendChild(img);
+            } else if (data.media_type === 'video') {
+              // If the media type is "video", generate an <iframe> tag
+              const iframe = document.createElement('iframe');
+              iframe.src = data.url;
+              mediaContainer.appendChild(iframe);
+            } else {
+              // If the media type is unknown, display the default HTML
+              container.innerHTML = defaultHtml;
+            }
           })
 
       },

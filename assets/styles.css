@@ -608,11 +608,19 @@ h2 {
     padding-right: 3vw;
 }
 
-#apod-img {
+#media-container {
     margin-top: 5rem;
     width: 90%;
     border-radius: 10px;
     min-height: 100%;
+}
+
+.apod-media>img{
+    max-width: 70%;
+}
+
+.apod-media>iframe{
+    width: 70%;
 }
 
 
@@ -1062,6 +1070,17 @@ form>input::placeholder {
     scale: 1;
     margin: 0 auto;
 
+}
+
+.barbless-gear-img{
+    width: 100%;
+    margin-top: 7rem;
+}
+
+.barbless-img{
+    width: 48%;
+    padding-top: 2rem;
+    padding-right: 1rem;
 }
 
 @media screen and (max-width: 800px) {

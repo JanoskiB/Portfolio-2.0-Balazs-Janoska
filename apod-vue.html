@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astronomy picture of the day</title>
-    <script defer src="assets/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script defer src="assets/index.js"></script>
     <link rel="stylesheet" href="assets/styles.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -40,9 +40,9 @@
     <main>
         <div id="vapp">
             <h3>Astronomy picture of the day</h3> <br>
-            <h1 >{{data.title}}</h1> <br>
+            <h1>{{data.title}}</h1> <br>
             <h2>{{data.date}}</h2> <br>
-            <img :src="data.url" alt="Astronomy Picture of The Day"> <br>
+            <div id="media-container"></div> <br>
             <h2>{{data.copyright}}</h2> <br>
             <p>{{data.explanation}}</p> <br>
             <a :href="data.hdurl" target="_blank"><button>Open HD image in new window</button></a>
@@ -66,6 +66,7 @@
     </footer>
 
     <script>
+        const mediaContainer = 'media-container';
         const vueApp = new Vue({
             el: '#vapp',
 
@@ -83,6 +84,21 @@
                     .then((data) => {
                         this.data = data;
                         console.log(data);
+                        const mediaContainer = document.getElementById('media-container');
+                        if (data.media_type === 'image') {
+                            // If the media type is "image", generate an <img> tag
+                            const img = document.createElement('img');
+                            img.src = data.url;
+                            mediaContainer.appendChild(img);
+                        } else if (data.media_type === 'video') {
+                            // If the media type is "video", generate an <iframe> tag
+                            const iframe = document.createElement('iframe');
+                            iframe.src = data.url;
+                            mediaContainer.appendChild(iframe);
+                        } else {
+                            // If the media type is unknown, display the default HTML
+                            container.innerHTML = defaultHtml;
+                        }
                     })
 
             },
@@ -108,12 +124,15 @@
             grid-template-columns: 1fr;
         }
 
-        p, h1, h2, h3{
+        p,
+        h1,
+        h2,
+        h3 {
             margin-top: 0;
             margin-bottom: 0;
         }
 
-        h1{
+        h1 {
             width: 100%;
             font-size: 2.5vw;
         }
@@ -149,7 +168,6 @@
         footer {
             margin-top: 5rem;
         }
-
     </style>
 
 
