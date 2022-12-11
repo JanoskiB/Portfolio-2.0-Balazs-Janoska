@@ -86,18 +86,14 @@
                         console.log(data);
                         const mediaContainer = document.getElementById('media-container');
                         if (data.media_type === 'image') {
-                            // If the media type is "image", generate an <img> tag
                             const img = document.createElement('img');
                             img.src = data.url;
                             mediaContainer.appendChild(img);
                         } else if (data.media_type === 'video') {
-                            // If the media type is "video", generate an <iframe> tag
                             const iframe = document.createElement('iframe');
                             iframe.src = data.url;
                             mediaContainer.appendChild(iframe);
                         } else {
-                            // If the media type is unknown, display the default HTML
-                            container.innerHTML = defaultHtml;
                         }
                     })
 

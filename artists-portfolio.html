@@ -12,6 +12,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/styles.css">
     <script defer src="assets/index.js"></script>
+    <script defer src="assets/loadbar.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
     </style>
@@ -29,29 +30,29 @@
 <body>
     <header id="header">
         <span><a class="logo" href="index.html">JB</a></span>
-    
+
         <nav class="nav-d">
-          <ul>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#projects">Projects</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-            <li><a href="Balazs-Janoska-CV.pdf" target="_blank">CV</a></li>
-          </ul>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="Balazs-Janoska-CV.pdf" target="_blank">CV</a></li>
+            </ul>
         </nav>
-    
+
         <nav class="nav-s">
-          <button class="nav__toggle">
-            <span class="hamburger"></span>
-          </button>
-          <ul class="nav__list">
-            <li class="nav__item"><a href="index.html#about" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="index.html#projects" class="nav__link">Projects</a></li>
-            <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
-            <li class="nav__item"><a href="Balazs-Janoska-CV.pdf" target="_blank" class="nav__link">CV</a></li>
-          </ul>
+            <button class="nav__toggle">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="index.html#projects" class="nav__link">Projects</a></li>
+                <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+                <li class="nav__item"><a href="Balazs-Janoska-CV.pdf" target="_blank" class="nav__link">CV</a></li>
+            </ul>
         </nav>
-    
-      </header>
+
+    </header>
     <div class="hero-section">
         <div class="hero-title">
             <h1 class="cases-h1">
@@ -69,6 +70,8 @@
         <img class="hero-mockup-portfolio" src="assets/images/portfolio-mockup.png" alt="portfolio mockup">
     </div>
     <main>
+        <div class="load-bar"></div>
+
         <div id="start" class="green-section">
             <h2>A problem to solve</h2>
             <p>For our second semester exam project, we had to find a client in need of a website. We found Zoja, an
@@ -137,19 +140,19 @@
     </main>
     <footer>
         <div class="footer-wrap">
-          <div class="icons-wrap">
-            <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img src="assets/icons/icon-linkedin.svg"
-                alt=""></a>
-            <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg"
-                alt="mail icon"></a>
-            <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg"
-                alt="github icon"></a>
-          </div>
-          <span>© BALAZS JANOSKA 2022</span>
-          <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png"
-              alt="icon up"></button>
+            <div class="icons-wrap">
+                <a href="https://www.linkedin.com/in/balazs-janoska/" target="_blank"><img
+                        src="assets/icons/icon-linkedin.svg" alt=""></a>
+                <a href="mailto:janoska.balazs@gmail.com" target="_blank"><img src="assets/icons/icon-mail.svg"
+                        alt="mail icon"></a>
+                <a href="https://github.com/JanoskiB" target="_blank"><img src="assets/icons/icon-github.svg"
+                        alt="github icon"></a>
+            </div>
+            <span>© BALAZS JANOSKA 2022</span>
+            <button onclick="topFunction()">To the top <img id="uparrow" src="assets/icons/icon-up.png"
+                    alt="icon up"></button>
         </div>
-      </footer>
+    </footer>
 </body>
 
 </html>
