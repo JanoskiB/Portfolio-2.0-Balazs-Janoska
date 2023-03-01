@@ -652,8 +652,8 @@ h2 {
 /* Swiper for mobile */
 
 .swiper {
-    display: none;
     height: fit-content;
+    display: none;
 }
 
 .swiper-content {
@@ -666,11 +666,6 @@ h2 {
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
-
-/* .swiper-wrap>p,h2{
-    margin-left: 2rem;
-    margin-bottom: 0.5rem;
-} */
 
 .swiper-content>h2 {
     margin-left: 2rem;
